@@ -1,0 +1,14 @@
+#containerSuccess{
+   background: #1d1919;
+   margin: 0 auto;
+   margin-top: 120px;
+   padding: 20px;
+   border: 1px solid  rgb(151, 154, 154);
+}
+
+.txtSuccess,#txtSeconds{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 40px;
+    display: inline;
+    font-family: 'Roboto Slab', serif;
+}

@@ -1,0 +1,198 @@
+#containerSetting{
+    background: #1d1919;
+    width: 60%;
+    margin: 0 auto 20px auto;
+    padding: 25px 0;
+    padding-left: 30px;
+    padding-right: 50px;
+    border-radius: 4px;
+}
+
+#title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    color: #e0e8ebf1;
+}
+
+#containerSetting form #inputGroup{
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#containerSetting form #inputGroup .inputBox{
+    margin-bottom: 15px;
+    width: calc(94% / 2);
+}
+
+#containerSetting form #inputGroup .inputBox .details{
+     margin-bottom: 5px;
+     font-size: 22px;
+     font-weight: 500px;
+     color: #e0e8ebf1;
+}
+
+#containerSetting form #inputGroup input{
+    display: inline-block;
+    width: 85%;
+     background: #722d2dc2;
+    height: 35px;
+    outline: none;
+    font-size: 19px;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(206, 185, 185, 0.945);
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #722d2dc2;
+    /* border-bottom-width: 2px; */
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-sizing: border-box;
+}
+
+#containerSetting form #inputGroup input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.inputBox button{
+    display: inline-block;
+    width: 15%;
+    height: 35px;
+    outline: none;
+    /* position: relative; */
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid #c52626c2;
+    background: #c52626c2;
+    box-sizing: border-box;
+}
+
+.inputBox button:hover{
+    background: #e01616c2;
+}
+
+.inputBox button:focus{
+     border: none;
+     outline: none;
+}
+
+#BtnPass{
+    bottom: 0;
+}
+
+ .inputBox button i{
+    font-size: 17px;
+}
+
+.boxBtn{
+    text-align: center;
+}
+
+.boxBtn button{
+   width: 60%;
+   font-size: 19px;
+   font-weight: 550;
+   height: 40px;
+   font-family: 'Ubuntu', sans-serif;
+   background: #c52626c2;
+   color: rgb(238, 225, 225);
+}
+
+.boxBtn button:hover{
+    background: #e01616c2;
+    color: rgb(238, 225, 225);
+ }
+
+ .boxBtn button:focus{
+     outline: none;
+     box-shadow: none;
+ }
+
+ .boxBtn #txtBtnSetting{
+     margin-top: 2px;
+     font-family: 'Ubuntu', sans-serif;
+     color: rgb(238, 225, 225);
+ }
+
+ @media(max-width:1199px) and (min-width:1101px) {
+    #containerSetting{
+         width: 75%;
+    }
+ }
+
+ @media(max-width:1100px) and (min-width:992px) {
+    #containerSetting{
+         width: 80%;
+    }
+ }
+
+ @media(max-width:991px) and (min-width:820px) {
+    #containerSetting{
+        width: 90%;
+   }
+
+}
+
+@media(max-width:819px){
+    #containerSetting form #inputGroup .inputBox .details{
+        display: block;
+    }
+    .boxBtn{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:819px) and (min-width:720px) {
+    #containerSetting{
+        width: 90%;
+   }
+
+   #containerSetting form #inputGroup .inputBox{
+    width: 85%;
+    margin: 0 auto;
+}
+}
+
+@media(max-width:719px) and (min-width:576px){
+    #containerSetting{
+        width: 95%;
+        padding: 25px 10px;
+   }
+
+   #containerSetting form #inputGroup .inputBox{
+    width: 90%;
+    margin: 0 auto;
+}
+}
+
+@media(max-width:575px) and (min-width:280px){
+    #containerSetting{
+        width: 100%;
+        padding: 25px 10px;
+   }
+
+   #containerSetting form #inputGroup .inputBox{
+    width: 95%;
+    margin: 0 auto;
+}
+.inputBox button{
+     position: relative;
+    bottom: 0.5px;
+}
+
+#containerSetting form #inputGroup button[name="password"]{
+    position: relative;
+    bottom: 0.5px;
+}
+}
+
+@media(max-width:575px){
+    .boxBtn button{
+     width: 75%;
+     }
+}

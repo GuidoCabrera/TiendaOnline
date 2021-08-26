@@ -1,0 +1,879 @@
+#containerBuy{
+    background:  #1d1919;
+    height: 100%;
+}
+
+#containerBuy #mainPhoto{
+    height: 530px;
+    width: 100%;
+    margin-top: 35px;
+}
+
+#containerSecondary{
+    height: 600px;
+    width: 20%;  
+}
+
+#containerMain{
+    height: 600px;
+     width: 45%;
+}
+
+#containerDetails{
+     width: 35%; 
+}
+
+.boxPhoto{
+    background: transparent;
+    height: 170px;
+    width:  100%;
+    padding: 0; 
+    margin-bottom: 10px;
+    border: none;
+    border-color: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+ #containerBuy #containerSecondary .boxPhoto:nth-child(1) {
+    margin-top: 35px;
+} 
+
+#containerBuy .secondaryPhotos{
+    height: 170px;
+    width:  170px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#containerDetails h2{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 35px;
+}
+
+#containerPrice{
+    margin-top: 30px;
+    position: relative;
+    height: 100px;
+}
+
+#finalPrice{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    left: 30px;
+    top: 30px;
+}
+
+#discount{
+    position: absolute;
+    left: 60px;
+    top: 13px; 
+    color: #006266;
+}
+
+#previousPrice{
+    position: absolute;
+    font-size: 20px;
+    left: 170px;
+    top: 40px;
+}
+
+#textCant{
+    position: relative;
+    bottom: 25px;
+}
+
+#containerInputNumber{
+    display: inline-block;
+    position: relative; 
+    width: 65px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.63);
+    transition: 0.10s;
+}
+
+#containerInputNumber:hover{
+    width: 90px;
+    border: 2px solid #006266;
+}
+
+#containerInputNumber .next,.prev{
+   position: absolute;
+   display: block;
+   top:50%;
+   width: 10px;
+   height: 10px;
+   z-index: 1;
+   border-top: 2px solid #fff;
+   border-left: 2px solid #fff;
+   cursor: pointer;
+   opacity: 0;
+   transition: 0.5s;
+}
+
+#containerInputNumber .next{
+    right: 20px;
+    transform:  translateY(-50%)rotate(135deg);
+}
+
+#containerInputNumber .prev{  
+    left: 20px;
+    transform:  translateY(-50%)rotate(315deg);
+}
+
+#containerInputNumber:hover .next{
+    opacity: 1;
+}
+
+#containerInputNumber:hover .prev{
+    opacity: 1;
+}
+
+#boxCant span{
+     position: absolute;
+     display: block;
+     width: 100%;
+     height: 100%; 
+     display: none;
+     text-align: center;
+     line-height: 44px;
+     color: #fff;
+     font-size: 20px;
+     user-select: none;
+     font-weight: 600;
+}
+
+#boxCant span:nth-child(1){
+    display: initial;
+}
+
+#availableStock{
+    float: right; 
+    margin-right: 30px;
+    font-size: 25px;
+    color:#006266;
+}
+
+#formularioBuy{
+    clear: right;
+}
+
+.textBuy{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.boxRelative{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.optionbox{
+    position: absolute;
+}
+
+.optionbox select {
+    background: #006266;
+    color: #fff;
+    padding-left: 10px;
+    width: 250px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    -webkit-appearance: button;
+    outline: none
+}
+
+ .optionbox:after {
+    content: '\E015';
+    font-family: "untitled-font-1";
+    position: absolute; 
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background: #006266;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+    font-size: 25px;
+    pointer-events: none
+} 
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+  }
+  .radio-group .input-container {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin: 5px;
+  }
+  .radio-group .input-container .radio-button {
+    opacity: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer; 
+    z-index: 2;
+  }
+  .radio-group .input-container .containerWaist{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 100%;
+    border: 2px solid #006266;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: transform 300ms ease;
+  }
+  .radio-group .input-container .icon p{
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    top: 7px; 
+    font-size: 20px; 
+    font-weight: 700; 
+    color: #006266;
+  }
+
+  .radio-group .input-container .Waist-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #006266;
+  }
+  .radio-group .input-container .radio-button:checked + .containerWaist {
+    background-color: #006266;
+    border: 2px solid #006266;
+    transform: scale(1.1, 1.1); 
+  }
+   .radio-group .input-container .radio-button:checked + .containerWaist .icon p {
+    color: white;
+    background-color: #006266;
+    z-index: 1;
+  }
+
+  .radio-group .input-container .radio-button:checked + .containerWaist .Waist-label {
+    color: white;
+    background-color: #006266;
+  } 
+
+   .containerSubmit{
+      width: 100%;
+      height: 50px;
+      text-align: center;
+  } 
+
+  .containerSubmit .btnSubmit{
+      margin: 0;
+      background: #006266;
+      color: white;
+      width: 40%;
+      border: none;
+      transition: 0.25s;
+  }
+
+  .containerSubmit .btnSubmit:hover{
+      background: #014042;
+      width: 50%;
+      height: 40px;
+      font-size: 19px;
+  }
+
+  #containerBuy .secondaryPhotos:focus{
+    border: 3px solid red;
+    background: blue;
+}
+
+@media(max-width:1199px) and (min-width:992px) {
+  
+    #containerBuy{
+        height: 1100px;
+    }
+
+    #containerSecondary{
+        width: 30%;
+        border-right: 2px solid rgba(255, 255, 255, 0.452);
+        border-bottom: 2px solid  rgba(255, 255, 255, 0.452);
+    }
+
+    #containerBuy .secondaryPhotos{
+        width:  200px;
+    }
+    
+    #containerMain{
+        width: 70%;
+        border-bottom: 2px solid  rgba(255, 255, 255, 0.452);
+    }
+
+    #containerBuy #mainPhoto{
+        margin-left: 50px;
+    }
+    
+    #containerDetails{
+        height: 500px;
+        width: 100%;
+    }
+
+    #containerPrice{
+        margin-top: 15px;
+        width: 50%;
+        float: left;
+    }
+    
+    #finalPrice{
+        left: 180px;
+    }
+    
+    #discount{
+        left: 210px;
+    }
+    
+    #previousPrice{
+        left: 300px;  
+    }
+
+    #availableStock{
+        float: left;
+        position: relative;
+        left: 25px;
+        top:30px;
+    }
+
+    #textCant{
+        float: left;
+        left: 20px;
+        top: 65px;
+    }
+
+    #containerInputNumber{
+        float: left;
+        left: 20px;
+        top: 55px;
+    }
+
+    #formularioBuy{
+        position: relative;
+        top: 130px;
+        height: 300px;
+    }
+
+    .textBuy{
+        display: inline;
+    }
+
+    .textBuy:nth-child(1){
+        position: absolute;
+        top: 15px;
+        right: 100px;
+    }
+
+    #text{
+        position: absolute;
+        left: 30px;
+        top: 70px;
+    }
+
+     .boxRelative{
+        position: absolute;   
+        right: 80px;
+        bottom: 195px;
+    } 
+
+    .radio-group{
+        position: absolute;
+        left: 30px;
+        top: 110px;
+    }
+
+    .containerSubmit {
+        position:absolute;
+        bottom: 0;
+    }
+  }
+
+  @media(max-width:1199px) and (min-width:1101px) {
+    #containerBuy #mainPhoto{
+        width: 80%;
+    }
+  }
+
+  @media(max-width:1100px) and (min-width:992px) {
+      
+  #containerBuy #mainPhoto{
+    margin-left: 30px;
+    width: 85%;
+}
+  }
+
+
+  @media(max-width:991px) and (min-width:768px) {
+
+    #containerBuy{
+        position: relative; 
+        height: 1380px; 
+    }
+
+     #containerSecondary{
+        width: 100%;
+        height: 230px;
+        position: absolute;
+        top: 600px;
+        border-bottom: 2px solid  rgba(255, 255, 255, 0.452);;
+        border-top: 2px solid  rgba(255, 255, 255, 0.452);;
+    }
+
+     #containerSecondary .boxPhoto{
+        height: 100%;
+        float: left;
+    } 
+
+    #containerSecondary .boxPhoto .secondaryPhotos{
+        width: 100%;
+        height: 100%;
+    }
+
+    #containerBuy #containerSecondary .boxPhoto:nth-child(1) {
+        margin-top: 0;
+    } 
+    
+    #containerMain{
+        margin: 0 auto;
+    }
+
+    #containerDetails{
+        height: 550px;
+        width: 100%;
+        position: relative;
+        top: 120px;
+    }
+
+     #availableStock{
+        position: absolute;
+        left: 205px;
+        top: 165px;
+    } 
+
+    #formularioBuy{
+        position: relative;
+        height: 305px;
+    }   
+
+     .containerSubmit {
+        position:absolute;
+        bottom: 0;
+    } 
+
+    .radio-group{
+        position: absolute;
+        left: 30px;
+        bottom: 80px;
+    }
+}
+
+@media(max-width:991px) and (min-width:900px) {
+
+    #containerMain{
+            width: 70%;
+    }
+
+    #containerSecondary .boxPhoto{
+        width: 28%;
+        margin-left: 4%;
+    } 
+
+}
+
+@media(max-width:899px) and (min-width:810px) {
+   
+
+    #containerMain{
+        width: 80%;
+    }
+
+    #containerSecondary{
+        height: 200px;
+    }
+
+   #containerSecondary .boxPhoto{
+    width: 28%;
+    margin-left: 4%;
+  } 
+
+}
+
+@media(max-width:809px) and (min-width:768px) {
+
+    #containerMain{
+        width: 90%;
+    }
+
+    #containerSecondary{
+        height: 200px;
+    }
+
+   #containerSecondary .boxPhoto{
+    width: 28%;
+    margin-left: 4%;
+  } 
+
+}
+
+@media (max-width:767px) and (min-width:576px) {
+     #containerBuy{
+        position: relative; 
+        height: 1380px; 
+    }
+
+     #containerSecondary{
+        width: 100%;
+        position: absolute;
+        top: 600px;
+    }
+
+     #containerSecondary .boxPhoto{
+        height: 100%;
+        float: left;
+    } 
+
+    #containerSecondary .boxPhoto .secondaryPhotos{
+        width: 100%;
+        height: 100%;
+    }
+
+    #containerBuy #containerSecondary .boxPhoto:nth-child(1) {
+        margin-top: 0;
+    } 
+    
+    #containerMain{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #containerDetails{
+        height: 550px;
+        width: 100%;
+        position: relative;
+        top: 120px;
+    }
+
+     #availableStock{
+        position: absolute;
+        left: 205px;
+        top: 165px;
+    } 
+
+    #formularioBuy{
+        position: relative;
+        height: 305px;
+    }   
+
+    .containerSubmit {
+        position:absolute;
+        bottom: 0;
+    }
+
+    .radio-group{
+        position: absolute;
+        left: 30px;
+        bottom: 80px;
+    }
+}
+
+@media (max-width:767px) and (min-width:706px) {
+
+    #containerMain{
+        width: 90%;
+    }
+
+    #containerSecondary{
+        height: 200px;
+    }
+
+   #containerSecondary .boxPhoto{
+    width: 30%;
+    margin-left: 2.5%;
+  } 
+
+  .radio-group{
+    left: 15px;
+}
+}
+
+@media (max-width:705px) and (min-width:650px) {
+
+    #containerBuy{
+        height: 1300px;
+       }
+
+    #containerMain{
+        width: 100%;
+        height: 570px;
+    }
+
+    #containerMain #mainPhoto{
+        height: 500px;
+    }
+
+    #containerSecondary{
+        height: 200px;
+        top: 570px;
+    }
+
+   #containerSecondary .boxPhoto{
+    width: 30%;
+    margin-left: 2.5%;
+  } 
+
+  #containerDetails{
+    height: 520px;
+    top: 100px;
+}
+
+.containerSubmit{
+    position: relative;
+    bottom: 0px;
+}
+
+#containerDetails .input-container{
+    height: 73px;
+    width: 73px;
+}
+
+.radio-group{
+    position: relative;
+    left: 0;
+    width: 100%;
+    bottom: 10px;
+}
+}
+
+@media (max-width:649px) and (min-width:576px) {
+
+    #containerBuy{
+        height: 1300px;
+       }
+
+    #containerMain{
+        width: 100%;
+        height: 500px;
+    }
+
+    #containerMain #mainPhoto{
+        height: 430px;
+    }
+
+    #containerSecondary{
+        height: 170px;
+        top: 500px;
+    }
+
+   #containerSecondary .boxPhoto{
+    width: 32%;
+    margin-left: 1%;
+  } 
+
+  #containerDetails{
+    height: 600px;
+    top: 80px;
+}
+
+  .radio-group{
+    position: relative;
+    left: 0;
+    width: 100%;
+    bottom: 10px;
+}
+
+.containerSubmit{
+    position: relative;
+    margin-top: 5px;
+    bottom: 0px;
+}
+}
+
+@media (max-width:575px) { 
+    #containerBuy{
+        position: relative; 
+        height: 1380px; 
+    }
+
+     #containerSecondary{
+        width: 100%;
+        position: absolute;
+        height: 200px;
+        top: 520px;
+    }
+
+     #containerSecondary .boxPhoto{
+        height: 100%;
+        width: 32%;
+        margin-left: 1%;
+        float: left;
+    } 
+
+    #containerSecondary .boxPhoto .secondaryPhotos{
+        width: 100%;
+        height: 100%;
+    }
+
+    #containerBuy #containerSecondary .boxPhoto:nth-child(1) {
+        margin-top: 0;
+    } 
+    
+    #containerMain{
+        margin: 0 auto;
+        width: 90%;
+        height: 520px;
+    }
+
+    #containerMain #mainPhoto{
+        height: 450px;
+    }
+
+    #containerDetails{
+        height: 550px;
+        width: 100%;
+        position: relative;
+        top: 60px;
+    }
+
+     #availableStock{
+        position: absolute;
+        left: 205px;
+        top: 165px;
+    }
+
+    #formularioBuy{
+        position: relative;
+        height: 305px;
+    }   
+
+    .radio-group{
+        position: relative;
+        left: 0;
+        width: 100%;
+        bottom: 10px;
+    }
+    
+    .containerSubmit{
+        position: relative;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:575px) and (min-width:517px){
+
+    #containerBuy{
+        height: 1300px;
+    }
+
+    #containerDetails{
+        height: 550px;
+        top: 100px;
+    }
+}
+
+@media (max-width:490px) and (min-width: 410px) {
+ 
+    #containerBuy{
+        height: 1280px; 
+    }
+
+    #containerDetails{
+        height: 640px;
+        top: 85px;
+    }
+
+    #containerMain{
+        width: 100%;
+        height: 470px;
+    }
+
+    #containerMain #mainPhoto{
+        height: 400px;
+    }
+
+    #containerSecondary{
+        height: 170px;
+        top: 470px;
+    }
+
+    .containerSubmit{
+        margin-top: 15px;
+    }
+ 
+}
+
+@media (max-width:409px) {
+
+    #containerBuy{
+        height: 1190px; 
+    }
+
+    #containerDetails{
+        height: 640px;
+        top: 75px;
+    }
+
+    .boxRelative{  
+        right: 35px;
+    } 
+
+    #containerSecondary .boxPhoto{
+        width: 32.5%;
+        margin-left: 0.5%;
+    } 
+
+    #containerMain{
+        width: 100%;
+        height: 400px;
+    }
+
+    #containerMain #mainPhoto{
+        height: 330px;
+    }
+
+    #containerSecondary{
+        height: 150px;
+        top: 400px;
+    }
+
+    .containerSubmit{
+        margin-top: 15px;
+    }
+
+}
+
+
+@media (max-width:330px) and (min-width: 320px) {
+
+    #containerBuy{
+        height: 1250px; 
+    }
+
+    .boxRelative{  
+        right: 40px;
+    } 
+
+    #containerDetails{
+        height: 670px;
+        top: 65px;
+    }
+     
+}
+
+

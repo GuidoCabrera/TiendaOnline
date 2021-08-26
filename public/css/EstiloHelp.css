@@ -1,0 +1,83 @@
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #f5f7f7;
+
+} 
+
+a:hover {
+    text-decoration: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    color: #cc1439;
+}
+
+a:focus {
+    text-decoration: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    color: #cc1439;
+}
+
+button{
+  background: none;
+  border: 0;
+  color: #f5f7f7;
+  padding: 0;
+}
+
+button:hover{
+    color: #cc1439;
+  }
+
+button:active{
+    border: 0;
+    outline: none;
+}
+
+
+p{
+    color: #f5f7f7;
+}
+
+.card{
+    background: #1d1919;
+}
+
+.card-header{
+   border-color: #cc1439;
+}
+
+.noLine{
+    border: none;
+}
+
+#divCat{
+    background: #1d1919;
+    display: inline-block;
+    height: 60px;
+}
+
+.dropdown-menu{
+   background: rgba(29, 25, 25, 0.8);
+   width: 180px;
+}
+
+.ocultar {
+    transition: height 100ms 600ms, opacity 600ms 0ms;
+    opacity: 0;
+    height: 0;
+    overflow: hidden; 
+    position: absolute;
+}
+
+.mostrar {
+    opacity: 1;
+    height: auto;
+    position: static;
+    transition: height 100ms 400ms, opacity 800ms 0ms;
+}

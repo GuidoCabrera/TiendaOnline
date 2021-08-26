@@ -1,0 +1,136 @@
+h2 {
+  color: #f5f7f7;
+  font-size: 40px;
+}
+
+.icon-close {
+  color: #f5f7f7;
+}
+
+.modal-dialog {
+  height: 90%;
+}
+
+.modal-content {
+  background: transparent;
+  border: 0;
+}
+
+.modal-footer a{
+   margin: 0 auto;
+   margin-top: 15px;
+}
+
+#btnBuy:hover {
+  background: #cc1439ed !important;
+  border-color: #cc1439ed !important;
+  -webkit-box-shadow: #cc1439ed !important;
+  box-shadow: #cc1439ed !important;
+}
+
+ #btnBuy {
+  width: 400px;
+} 
+
+.modal-content{
+  margin: 0 10px;
+}
+
+.modal-content img {
+  height: 500px;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.galleryImg {
+  height: 280px;
+  transition: all 0.30s ease-out;
+}
+
+.card {
+  margin: 0 -8px;
+  border: none;
+}
+
+@media(max-width:1199px) and (min-width:1081px) {
+  
+  .galleryImg {
+    height: 300px;
+  }
+
+  .card {
+    margin: 0 -4px;
+  }
+}
+
+@media(max-width:991px) and (min-width:768px) {
+  
+  .galleryImg {
+    height: 370px;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+
+@media(max-width:575.8px) and (min-width:500px) {
+  .galleryImg {
+    height: 500px;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 499px) and (min-width:400px) {
+  .galleryImg {
+    height: 450px;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+
+  .modal-content img {
+    margin: 0 10px;
+    height: 450px;
+  }
+}
+
+
+@media(max-width: 399px) and (min-width:321px) {
+  .galleryImg {
+    height: 400px;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+
+  .modal-content img {
+    margin-left: 0;
+    height: 400px;
+  }
+}
+
+@media(max-width: 320px) and (min-width:0px) {
+  .galleryImg {
+    height: 300px;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+
+  .modal-content img {
+    margin-left: 0;
+    height: 350px;
+  }
+}
+
+
+
