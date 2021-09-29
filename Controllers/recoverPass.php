@@ -39,7 +39,7 @@ class recoverPass extends controller{
         else{
            echo "<script type='text/javascript'>  
               alert('ha ocurrido un error al mandar el mail, ingrese nuevamente su email');
-              window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/RecoverPass';
+              window.location.href='".constant("URL")."RecoverPass';
               </script>";
         }
       }
@@ -61,7 +61,7 @@ class recoverPass extends controller{
        else{
            echo "<script type='text/javascript'>
            alert('Se fue pal otro lado');
-           window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/main';
+           window.location.href='".constant("URL")."main';
 </script>";
            
        }
@@ -73,7 +73,7 @@ class recoverPass extends controller{
            $pass = $_POST["password"];
            if($this->model->insertNewPass($pass,$_SESSION['user']['id'])&&$this->model->ChangeResetpass($_SESSION['user']['id'])){
             echo "<script type='text/javascript'>
-            window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/successful';
+            window.location.href='".constant("URL")."successful';
         </script>";
            }
            else{

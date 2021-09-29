@@ -152,7 +152,7 @@ button.addEventListener('click', (e) => {
 
 		$.ajax({
 			type:'post',
-			url: 'http://192.168.2.102/PHP/ProyectoBootstrap/CreateAccount/sendMail',
+			url: constURL+'createAccount/sendMail',
 			data: dataex,
 			success: function(resp){
 				$("#respa").html(resp);
@@ -171,7 +171,7 @@ button.addEventListener('click', (e) => {
         
 		$.ajax({
           type:'post',
-		  url: 'http://192.168.2.102/PHP/ProyectoBootstrap/createAccount/InsertC',
+		  url: constURL+'createAccount/InsertC',
           data: dataen,
 		  success: function(resp){
 			  $("#respa").html(resp);

@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: http://192.168.2.102/PHP/ProyectoBootstrap/');
+  header('Location:'.constant("URL"));
 ?>

@@ -3,7 +3,6 @@
 class controller{
 
     function __construct(){
-        //echo "controlador base";
         $this->view = new view();
     }
 
@@ -19,5 +18,4 @@ class controller{
     }
 
 }
-
 ?>

@@ -39,16 +39,16 @@ class createAccount extends controller{
         else{
            echo "<script type='text/javascript'>  
               alert('ha ocurrido un error al manda el mail, complete nuevamente el formulario');
-              window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/createAccount';
+              window.location.href='".constant("URL")."createAccount';
               </script>";
         }
       }
 
     else{
     echo "<script type='text/javascript'>
-       if(window.location.href=='http://192.168.2.102/PHP/ProyectoBootstrap/createAccount/registrarCliente'){
+       if(window.location.href=='".constant("URL")."createAccount/registrarCliente'){
                 alert('Ha ocurrido un error con los datos proporcionados, por favor complete los campos nuevamente');
-                window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/createAccount';
+                window.location.href='".constant("URL")."createAccount';
                 }
     </script>";
     }
@@ -73,7 +73,7 @@ class createAccount extends controller{
 
             if($this->model->getByEmail($email)){
          echo "<script type='text/javascript'>
-                  window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/successful';
+                  window.location.href='".constant("URL")."successful';
        </script>";
       }
    }

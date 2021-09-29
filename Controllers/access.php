@@ -25,7 +25,7 @@ class Access extends controller{
             $value = $this->model->getByEmail(['email'=>$email,'password'=>$password]);
             if($value){
             echo "<script type='text/javascript'>  
-              window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap';
+            window.location.href='".constant("URL")."';
               </script>";
             }
             else{

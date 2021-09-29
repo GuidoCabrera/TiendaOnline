@@ -85,7 +85,8 @@
 <!-- Datepicker Boostrap -->
     <script src="<?php echo constant("URL")?>public/libsExternals/js/bootstrap-datepicker.min.js"></script>
     <script src="<?php echo constant("URL")?>public/libsExternals/locales/bootstrap-datepicker.es.min.js"></script>
-    <!--  -->
+    <!-- public js  -->
+    <script src="<?php echo constant("URL")?>public/js/url.js"></script>
     <script src="<?php echo constant("URL")?>public/js/main.js"></script>
     <script src="<?php echo constant('URL')?>public/js/inputToggle.js"></script>
     <script src="<?php echo constant('URL')?>public/js/setting.js"></script>

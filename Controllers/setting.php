@@ -55,7 +55,7 @@ Class setting extends controller{
         else{
             echo "<script type='text/javascript'>
                alert('Ha ocurrido un error algo realizar el cambio, pruebe nuevamente mas tarde');
-               window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/main';
+               window.location.href='".constant("URL")."main';
             </script>";
         }
     }
