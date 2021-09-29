@@ -10,28 +10,27 @@ function __construct(){
 
 function searchEmail($email){
     try{ 
-    $query = $this->db->connect();
-    $stmt = $query->prepare('SELECT * FROM usuarios WHERE email=:email');
-    $stmt->bindParam(':email',$email);
-    $stmt->execute();
+     $query = $this->db->connect();
+     $stmt = $query->prepare('SELECT * FROM usuarios WHERE email=:email');
+     $stmt->bindParam(':email',$email);
+     $stmt->execute();
 
-    $results = $stmt->fetch(PDO::FETCH_ASSOC);
+     $results = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if($results!=false){
+     if($results!=false){
         $user = New Cliente($results['IdUsuario'],$results['Nombre'],$results['Apellido'],$results['contraseña'],$results['FechaNacimiento'],$results['Email'],$results['IdRol']);
         return $user;
-    }
-    else{
+     }
+     else{
         return null;
+     }
     }
-}
 
-catch(PDOEXCEPTION $e){
-    print_r($e->getMessage());
-    return null;
-}
-
-}
+    catch(PDOEXCEPTION $e){
+     print_r($e->getMessage());
+     return null;
+    }
+  }
 
 function insertResetPass($token,$id){
     try{
@@ -49,7 +48,7 @@ function insertResetPass($token,$id){
 
 function searchToken($id,$token){
     session_start();
-    try{
+try{
     $query = $this->db->connect();
     $stmt = $query->prepare("SELECT * FROM usuarios WHERE IdUsuario=:id and resetcontraseña=:token");
     $stmt->bindParam(":id",$id);
@@ -91,12 +90,12 @@ function changeResetPass($id){
         $stmt->execute();
 
         return true;
+    }
+    catch(PDOEXCEPTION $e){
+        $e->getMessage();
+        return false;
+    }
   }
-  catch(PDOEXCEPTION $e){
-      $e->getMessage();
-      return false;
-  }
-}
 
 }
 ?>

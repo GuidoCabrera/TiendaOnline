@@ -26,28 +26,27 @@ include_once 'Clientes.php';
 
    public function updateData($valores,$nombreFilas,$id){
    
-    
     $array = ["Nombre","Apellido","contraseña","FechaNacimiento"];
     try{
-    $query = $this->db->connect();
+     $query = $this->db->connect();
  
-    foreach($array as $element){
+     foreach($array as $element){
         if(array_key_exists($element,$valores)){
           $valor = $valores[$element];
             $stmt = $query->prepare("UPDATE usuarios SET $element = '$valor' WHERE IdUsuario = :id");
             $stmt->bindParam(":id",$id,PDO::PARAM_INT);        
             $stmt->execute();
         }
-    }
-    return true;
-  }
-
-  catch(PDOEXCEPTION $e){
-    print_r($e->getMessage());
-    return false;
-  }
-     
+     }
+     return true;
    }
+
+   catch(PDOEXCEPTION $e){
+     print_r($e->getMessage());
+     return false;
+   }
+
+  }
 
   }
 ?>

@@ -15,7 +15,6 @@ class createAccountModel extends Model {
 
       try{
         $query = $this->db->connect();
-        // print_r($query);
         $stmt = $query->prepare('INSERT INTO USUARIOS(NOMBRE,APELLIDO,CONTRASEÑA,FECHANACIMIENTO,EMAIL,IDROL) VALUES(:nombre,:apellido,:pass,:fechaNac,:email,:idrol)');
         $datos['nombre'] = ucfirst($datos['nombre']);
         $stmt->bindparam(':nombre',$datos['nombre']);
@@ -29,44 +28,14 @@ class createAccountModel extends Model {
 
         return true;
       }
-
       catch(PDOEXCEPTION $e ){
         print_r($e->getMessage());
         return false;
      }
-
-
-      //   $conn = $this->db->connect();
-      //   if($conn){
-      //       $FechaNac = explode("/",$datos['FechaNac']);
-      //       $FechaNac2 = $FechaNac[2]."-".$FechaNac[1]."-".$FechaNac[0];
-      //       $sql = "INSERT INTO Usuarios(Nombre,Apellido,Contraseña,FechaNacimiento,Email,IdRol) VALUES('".$datos["nombre"]."','".$datos["apellido"]."','".$datos["contraseña"]."','".$FechaNac2."','".$datos["email"]."','2')";
-      //         if (mysqli_query($conn, $sql)) {
-      //            mysqli_close($conn);
-      //            return true;
-      //      }
-      //      else{
-      //        echo "<script type='text/javascript'>
-      //        alert('no se pudo completar la registración');
-      //        </script>";
-      //        mysqli_error($conn);
-      //        mysqli_close($conn);
-      //        return false;
-      //      } 
-      //        return true;
-      //   }
-
-      //   else if(!$conn) {
-      //       die("Connection failed: " . mysqli_connect_error());
-      //       return false;
-      // }
-        
-
     }
 
     public function getByEmail($email){
 
-      // session_start();
       $query = $this->db->connect();
       $stmt = $query->prepare("SELECT * FROM Usuarios WHERE email=:email");
       $stmt->bindParam(":email",$email);
@@ -77,11 +46,11 @@ class createAccountModel extends Model {
 
           if($results != false && $email != ""){
               $_SESSION['user'] = array("id"=>$results['IdUsuario'],"nombre"=>$results['Nombre']);
-          return true;
-      }
-      else{
-          return false;
-      }
+              return true;
+          }
+          else{
+             return false;
+          }
          
        }
 
@@ -91,9 +60,5 @@ class createAccountModel extends Model {
     }
 }
 
-
 }
-
-
-
 ?>
