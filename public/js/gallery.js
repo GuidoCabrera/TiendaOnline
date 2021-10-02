@@ -32,7 +32,7 @@ for(imagen of imagenes){
 
           <div class="modal-footer">
 
-         <a href="http://192.168.2.102/PHP/ProyectoBootstrap/Buy/Article/${id.textContent}/${imagen}">
+         <a href="${constURL}Buy/Article/${id.textContent}/${imagen}">
 
          <button type="button" id="btnBuy" class="btn btn-primary">Comprar</button>
 

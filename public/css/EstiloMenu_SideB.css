@@ -44,9 +44,10 @@
 
 .logo {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     outline: none;
+    border-radius: 80px;
 }
 
 #sidebar ul li a {
@@ -227,9 +228,10 @@
         position: static;
         opacity: 1;
     }
-
-
-
+    #sidebar .logo{
+        width: 115px;
+        height: 115px;
+    }
 }
 
 @media(max-width:575.8px) and (min-width:0) {

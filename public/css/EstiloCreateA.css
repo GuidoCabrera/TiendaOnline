@@ -9,9 +9,10 @@
      color: #f5f7f7;
  }
 
- .logo{
-     margin-left: 20px;
- }
+ #containerSingIn .logo{
+    position: relative;
+    left: 15px;
+}
 
  #containerSingIn .input-grupo input{
     border: 0;
@@ -159,15 +160,16 @@
 
 @media(max-width:991px) and (min-width:768px) {
     #containerSingIn{
-        width: 90%;
+        width: 95%;
     }
     #containerSingIn input{
         width: 75%;
     }
-    .logo{
-        margin-left: 0;
+    #containerSingIn .logo{
+        left: 0;
+        width: 115px;
+        height: 115px;
     }
-
     button[type="submit"]{      
         width: 55%;
     }

@@ -49,7 +49,7 @@ btnSubmit.addEventListener("click", function(){
           
      $.ajax({
       type:'post',
-      url: 'http://192.168.2.102/PHP/ProyectoBootstrap/Setting/ChangeData',
+      url: constURL+'Setting/ChangeData',
       data: dataex,
       success: function(resp){
         $("#respa").html(resp);
