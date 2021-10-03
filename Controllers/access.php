@@ -24,9 +24,7 @@ class Access extends controller{
             $password = $_POST['password'];
             $value = $this->model->getByEmail(['email'=>$email,'password'=>$password]);
             if($value){
-            echo "<script type='text/javascript'>  
-              window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap';
-              </script>";
+              header('Location:'.constant('URL'));
             }
             else{
                 $this->view->mensaje = "El email y contraseña no coinciden con ninguna cuenta registrada";
@@ -35,7 +33,7 @@ class Access extends controller{
         }
         else{
           $this->view->mensaje = "No se ha completado ningun campo";
-                $this->render('');
+          $this->render('');
         }
     }
 

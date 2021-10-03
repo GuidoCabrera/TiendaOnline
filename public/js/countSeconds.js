@@ -4,7 +4,7 @@ function conteo(){
     document.getElementById("txtSeconds").innerHTML = cont;
 
     if(cont==0){
-        window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/Main';
+        window.location.href='http://192.168.2.103/PHP/ProyectoBootstrap/Main';
     }
 
     else{
