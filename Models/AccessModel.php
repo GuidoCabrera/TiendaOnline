@@ -22,11 +22,8 @@ class AccessModel extends Model{
                     session_start();
                     $_SESSION['user'] = array("id"=>$results['IdUsuario'],"nombre"=>$results['Nombre']);
                 return true;
-            }
-            else{
-                return false;
-            }
-               
+                }
+                else{ return false; }       
         }
         catch(PDOEXCEPTION $e){
             print_r($e->getMessage());
@@ -35,5 +32,4 @@ class AccessModel extends Model{
     }
 
 }
-
 ?>

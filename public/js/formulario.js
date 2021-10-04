@@ -110,58 +110,44 @@ inputs.forEach((input) => {
 	input.addEventListener("blur", validarFormulario);
 })
 
-//  $(document).ready(function(){
-//  	if(window.location.href=="http://192.168.2.102/PHP/ProyectoBootstrap/createAccount/registrarCliente"){
-//  				$('#emailValidation').modal('show');
-//  			   }
-//  });
+function enviarMail(){
 
-button.addEventListener('click', (e) => {
+	var dataex = "Email="+inputs[5].value+"&Code="+num;
 
-		 var txt = document.getElementById('txt-submit');
-	
-		if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
-
-            
-		    // formulario.submit();  
-			// enviarMail();
-			// alert(inputs[5].value);
-			// alert(num);
-			$('#emailValidation').modal('show');
-		
-			document.querySelectorAll("#containerSingIn i").forEach((icono) =>{
-				icono.setAttribute("class","invisible");
-		   })
-
-		   txt.innerHTML = "Form sent successfully.";
-		   setTimeout(() => {
-					 txt.innerHTML="";	 
-					},3000);
-			
-	}
-
-		else{
-			txt.innerHTML = "<b>Error:</b> Please fill in the form correctly.";
+	$.ajax({
+		type:'post',
+		url: constURL+'createAccount/sendMail',
+		data: dataex,
+		success: function(resp){
+			$("#respa").html(resp);
 		}
+	  });
+	return false;
+};
+
+
+ button.addEventListener('click', (e) => {
+
+ 		 var txt = document.getElementById('txt-submit');
 	
-	});
+ 		if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
+        
+			txt.innerHTML = "Form sent successfully.";
+			setTimeout(() => {
+				txt.innerHTML="";
+				$('#emailValidation').modal('show');	 
+			   },2000);
+		
+ 			document.querySelectorAll("#containerSingIn i").forEach((icono) =>{
+ 				icono.setAttribute("class","invisible");
+ 		   })		
+        }
 
-	function enviarMail(){
-
-		var dataex = "Email="+inputs[5].value+"&Code="+num;
-
-		$.ajax({
-			type:'post',
-			url: constURL+'createAccount/sendMail',
-			data: dataex,
-			success: function(resp){
-				$("#respa").html(resp);
-			}
-		  });
-
-		  return false;
-	};
-
+ 		else{
+ 			txt.innerHTML = "<b>Error:</b> Please fill in the form correctly.";
+ 		}
+	
+ 	});
 
 	function enviar(){
 

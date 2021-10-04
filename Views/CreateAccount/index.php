@@ -102,7 +102,7 @@
         <p class="mt-1">A 6-digit code has been sent to your email, enter your code to continue</p>
          <form id="formEmail" method="post" onsubmit="return enviar();">
         <div class="input-grupo">
-        <input type="text" name="codeEmail" id="codeEmail" maxlength="6" onkeypress="return check(event);" class="form-control text-center" autocomplete="false">
+        <input type="text" name="codeEmail" id="codeEmail" maxlength="6" onkeypress="return check(event);" class="form-control text-center" autocomplete="off">
         </div>
         </form> 
         
@@ -128,7 +128,7 @@
           <div class="col-3 d-none d-md-block p-0 align-self-center">
 
             <a href="<?php echo constant("URL")?>Main" class="img logo rounded-circle"
-              style="background-image: url(<?php echo constant("URL")?>public/img/comunicacion-global.png);"></a>
+              style="background-image: url(<?php echo constant("URL")?>public/img/TiendaOnline.jpg);"></a>
 
           </div>
 
