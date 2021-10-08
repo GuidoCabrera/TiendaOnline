@@ -322,8 +322,6 @@
 
     #menu:checked ~ * .nav-links-p {
         text-align: start;
-        /* text-align: center; */
-        /* text-align: left; */
     } 
 
     #menu:checked ~ * .nav-links-p h2 {

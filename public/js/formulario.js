@@ -169,22 +169,4 @@ function enviarMail(){
          alert("you must enter a 6-digit number");
 		}
 		return false;
-	};
-
-	 	// button2.addEventListener("click",function(){
-			
-	 	// 	if(inputCode.value.length==6){
-		// 		// formularioE.submit();
-
-	 	// 	}
-	 	// 	else{
-        //         alert("you must enter a 6-digit number");
-	 	// 	}
-			
-	 	// });
-
-
-
-
-
-	 
+	};	 

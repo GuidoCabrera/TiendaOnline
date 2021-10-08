@@ -41,16 +41,12 @@ else if(sidebar.className=="" && tam1 <= 767 && tam1 >= 640){
 
 $(window).resize(function () 
 {
-    
-    terms();
-    
+    terms();  
 });
 
 var EventoBoton = document.getElementById("sidebarCollapse");
 EventoBoton.addEventListener("click", function () {
-
-     terms();
-    
+     terms();  
 });
 
 function terms(){

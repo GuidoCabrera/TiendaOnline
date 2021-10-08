@@ -11,6 +11,4 @@ class help extends controller{
  }
 
 }
-
-
 ?>

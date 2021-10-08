@@ -1,6 +1,7 @@
 <?php
 
 include_once 'Clientes.php';
+include_once 'modelFunctions.php';
 
 class AccessModel extends Model{
 
@@ -10,25 +11,16 @@ class AccessModel extends Model{
 
    public function getByEmail($datos){
 
-            $query = $this->db->connect();
-            $stmt = $query->prepare("SELECT * FROM Usuarios WHERE email=:email");
-            $stmt->bindParam(":email",$datos['email']);
-            
-        try{
-                $stmt->execute();
-                $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = new ModelFunctions();
+        $email = $datos['email'];
+        $results = $stmt->getElement("SELECT * FROM Usuarios WHERE email='$email'");
 
-                if($results != false && $datos['password']==$results['contraseña']){
-                    session_start();
-                    $_SESSION['user'] = array("id"=>$results['IdUsuario'],"nombre"=>$results['Nombre']);
-                return true;
-                }
-                else{ return false; }       
+        if($results != false && $datos['password']==$results['contraseña']){
+            session_start();
+            $_SESSION['user'] = array("id"=>$results['IdUsuario'],"nombre"=>$results['Nombre']);
+            return true;
         }
-        catch(PDOEXCEPTION $e){
-            print_r($e->getMessage());
-            return false;
-        }
+        else{ return false; }       
     }
 
 }

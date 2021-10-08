@@ -27,13 +27,12 @@
   <div class="row">
     <div class="col-8" id="containerSuccess">
     
-<p class="txtSuccess"> your request was successful, you will be redirected in </p> <p id="txtSeconds"> 10 </p> <p class="txtSuccess">seconds...</p>
+    <p class="txtSuccess"> your request was successful, you will be redirected in </p> 
+    <p id="txtSeconds"> 10 </p> <p class="txtSuccess">seconds...</p>
     
     </div>
   </div>
 </div>
-
-
 
 </div>
 

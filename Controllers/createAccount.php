@@ -25,10 +25,7 @@ class createAccount extends controller{
       $code = $_POST['Code'];
       
       if($this->model->verifyExistEmail($email)){
-          echo "<script type='text/javascript'>  
-           window.location.href='".constant("URL")."createAccount';
-           alert('El mail proporcionado ya esta relacionado con una cuenta existente');
-           </script>";  
+         $this->Message('El mail proporcionado ya esta relacionado con una cuenta existente',constant("URL").'createAccount');
       }
       else{
          $header = "From: guidocabrerasdla97@gmail.com"."\r\n". 
@@ -37,20 +34,15 @@ class createAccount extends controller{
          $mail = mail($email,"Registracion tienda online","su codigo para completar la registracion es: ".$code,$header);
  
          if($mail!=true){
-           echo "<script type='text/javascript'>  
-           alert('ha ocurrido un error al manda el mail, complete nuevamente el formulario');
-           window.location.href='".constant("URL")."createAccount';
-           </script>";
+         $this->Message('ha ocurrido un error al enviar el mail, complete nuevamente el formulario',constant("URL").'createAccount');
          }
       }
    }
    else{
-      echo "<script type='text/javascript'>
-         if(window.location.href=='".constant("URL")."createAccount/sendMail'){
-                alert('Ha ocurrido un error con los datos proporcionados, por favor complete los campos nuevamente');
-                window.location.href='".constant("URL")."createAccount';
-         }
-      </script>";
+      $link = "http://"."$_SERVER[HTTP_HOST]"."$_SERVER[REQUEST_URI]";
+        if($link==constant("URL").'createAccount/sendMail'){
+          $this->Message('ha ocurrido un error al mandar el mail, complete nuevamente el formulario',constant("URL").'createAccount');
+        }
    }
   }
 
@@ -62,21 +54,15 @@ class createAccount extends controller{
 
           if($this->model->insert(['nombre' => $_POST["name"],'apellido' => $_POST["surname"],'pass' => $_POST["password"],'FechaNac' => $_POST["birthday"],'email' => $_POST["Email"]])){
             if($this->model->getByEmail($_POST["Email"])){
-               echo "<script type='text/javascript'>
-                  window.location.href='".constant("URL")."successful';
-               </script>";
+               $this->Message('',constant("URL")."successful");
             }
           }
           else{
-            echo "<script type='text/javascript'>
-               alert('Ha surgido un error al enviar los datos');
-            </script>";
+            $this->Message('Ha surgido un error al enviar los datos');
          }
        }
        else{
-         echo "<script type='text/javascript'>
-            alert('El codigo ingresado no es coincidente');
-         </script>";
+         $this->Message('El codigo ingresado no es coincidente');
        }
     }
   }

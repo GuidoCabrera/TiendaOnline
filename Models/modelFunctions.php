@@ -48,68 +48,6 @@ class modelFunctions extends model{
              }
       }
 
-    // public function getUsers($table,$condition){
-    //     $users = [];
-    //     try{
-    //     $query = $this->db->connect();
-    //     $sql = $query->prepare("SELECT * FROM $table WHERE $condition");
-    //     $sql->execute();
-
-    //     while($result = $sql->fetch(PDO::FETCH_ASSOC)){
-    //         $user = new Usuario($result['IdUsuario'],$result['Nombre'],$result['Apellido'],$result['Contraseña'],$result['IdRol']);
-    //         array_push($users,$user);
-    //       }
-    //       if(count($users)==1){
-    //           return $user;
-    //       }
-    //       else if(count($users)>1){
-    //          return $users;
-    //      }
-    //    }
-
-    //    catch(PDOEXCEPTION $e){
-    //     printf("Connection Failed: ".$e->getMessage());
-    //     return false;
-    //    }
-    // }
-
-    // public function getAllUsers(){
-    //     $users = [];
-    // try{
-    //     $query = $this->db->connect();
-    //     $sql = $query->prepare("SELECT * FROM usuario");
-    //     $sql->execute();
-    //     while($result = $sql->fetch(PDO::FETCH_ASSOC)){
-    //         $user = new Usuario($result['IdUsuario'],$result['Nombre'],$result['Apellido'],$result['Contraseña'],$result['IdRol']);
-    //         array_push($users,$user);
-    //       }
-    //     return $users;
-    //   }
-    //   catch(PDOEXCEPTION $e){
-    //       print_r("Connection Failed: ".$e->getMessage());
-    //       return false;
-    //   }
-    // }
-
-    // public function getAllMovements()
-    // {
-    //     try{
-    //     $array = [];
-    //     $query = $this->db->connect();
-    //     $sql = $query->prepare("SELECT * FROM MOVIMIENTO");
-    //     $sql->execute(); 
-
-    //     while($result = $sql->fetch(PDO::FETCH_ASSOC)){
-    //         $element = ["name"=>$result["Nombre"],"id"=>$result["IdMovimiento"]];
-    //         array_push($array,$element);
-    //     }
-    //     return $array;
-    //    }
-    //    catch(PDOEXCEPTION $e){
-    //     print_r("Connection Failed: ".$e->getMessage());
-    //       return false;
-    //     }
-    // }
 
     public function getElement($stmt){
       try{

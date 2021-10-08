@@ -20,9 +20,8 @@ buttons.forEach((button) => {
             if(button.name == input.name){
                input.disabled = false;
                input.focus();
-               var val = input.value; 
                input.value = ''; 
-               input.value = val;
+               input.value = valueInputs[input.name];
             }
         });
 
@@ -32,36 +31,36 @@ buttons.forEach((button) => {
 
 btnSubmit.addEventListener("click", function(){
       
-         for(var i=0;i<inputs.length;i++){
-           if(inputs[i].value!=valueInputs[inputs[i].name]){
-               aux=true;
-               if(dataex==""){
-                dataex = inputs[i].name+"="+inputs[i].value+"&";
-               }
-               else{
-               dataex += inputs[i].name+"="+inputs[i].value+"&";
-            }
+    for(var i=0;i<inputs.length;i++){
+       if(inputs[i].value!=valueInputs[inputs[i].name]){
+           aux=true;
+           if(dataex==""){
+            dataex = inputs[i].name+"="+inputs[i].value+"&";
            }
-         }
-
-   if(aux==true){
-     dataex = dataex.slice(0,-1);
-          
-     $.ajax({
-      type:'post',
-      url: constURL+'Setting/ChangeData',
-      data: dataex,
-      success: function(resp){
-        $("#respa").html(resp);
+           else{
+           dataex += inputs[i].name+"="+inputs[i].value+"&";
+           }
+       }
     }
-  });
-    return false;
-}
-  else{
-    var txtBtn = document.getElementById("txtBtnSetting").innerText = "No se ha producido ningun cambio";
-  }
 
-     }); 
+    if(aux==true){
+       dataex = dataex.slice(0,-1);
+            
+       $.ajax({
+        type:'post',
+        url: constURL+'Setting/ChangeData',
+        data: dataex,
+        success: function(resp){
+          $("#respa").html(resp);
+        }
+       });
+      return false;
+    }
+    else{
+      var txtBtn = document.getElementById("txtBtnSetting").innerText = "No se ha producido ningun cambio";
+    }
+
+  }); 
 
     
 

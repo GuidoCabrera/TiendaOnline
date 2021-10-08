@@ -154,6 +154,7 @@
     <script src="<?php echo constant("URL")?>public/js/url.js"></script>
     <script src="<?php echo constant("URL")?>public/js/main.js"></script>
     <script src="<?php echo constant("URL")?>public/js/datepicker.js"></script>
+    <script src="<?php echo constant("URL")?>public/js/datepickerCreate.js"></script>
     <script src="<?php echo constant("URL")?>public/js/inputToggle.js"></script>
     <script src="<?php echo constant("URL")?>public/js/formulario.js"></script>
 

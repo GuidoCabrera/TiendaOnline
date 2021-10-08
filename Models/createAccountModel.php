@@ -24,24 +24,15 @@ class createAccountModel extends Model {
 
     public function getByEmail($email){
 
-      $query = $this->db->connect();
-      $stmt = $query->prepare("SELECT * FROM Usuarios WHERE email='$email'");
-      
-      try{
-          $stmt->execute();
-          $results = $stmt->fetch(PDO::FETCH_ASSOC);
+          $stmt = new modelFunctions();
+          $results = $stmt->getElement("SELECT * FROM Usuarios WHERE email='$email'");
 
           if($results != false && $email != ""){
               $_SESSION['user'] = array("id"=>$results['IdUsuario'],"nombre"=>$results['Nombre']);
               return true;
           }
           else{ return false; }     
-      }
-
-      catch(PDOEXCEPTION $e){
-        print_r($e->getMessage());
-        return false;
-      }
+      
     }
     
     public function verifyExistEmail($email){
