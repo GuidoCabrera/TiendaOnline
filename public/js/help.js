@@ -1,6 +1,5 @@
 var Change = function (id) {
     var btnAct = document.getElementById(id);
-    // console.log(btnAct.id);
     var btnInc = [document.getElementById("btnHelp1"), 
      document.getElementById("btnHelp2"),document.getElementById("btnHelp3"), 
      document.getElementById("btnHelp4"),document.getElementById("btnHelp5")];

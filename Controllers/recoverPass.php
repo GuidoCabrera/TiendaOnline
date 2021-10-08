@@ -1,5 +1,4 @@
 <?php
-
 class recoverPass extends controller{
 
    function __construct(){
@@ -15,7 +14,12 @@ class recoverPass extends controller{
       session_unset();
       session_destroy();
     }
-      $this->view->render('recover/index');
+      $this->view->render('recoverPass/index');
+   }
+
+   function utf8_to_latin2($str)
+   {
+    return iconv ( 'utf-8', 'ISO-8859-1' , $str );
    }
    
    function sendEmail(){
@@ -23,48 +27,30 @@ class recoverPass extends controller{
        $user = $this->model->searchEmail($email);
 
        if($user!=null){
-           $token = uniqid();
-           $this->model->insertResetpass($token,$user->getId2());
+          $token = uniqid();
+          $this->model->insertResetpass($token,$user->getId2());
            
-      $header = "From: guidocabrerasdla97@gmail.com"."\r\n". 
-      "Reply-To: guidocabrerasdla97@gmail.com"."\r\n". 
-      "X-Mailer: PHP/".phpversion();
-       $mail = mail($email,"Recuperacion de contraseña","Se ha solicitado un cambio de contraseña en la cuenta de tiendaonline.com, para continuar con el cambio de contraseña haga click en el siguiente link: ".constant('URL')."recoverPass/ChangePassword/".$user->getId2()."/".$token,$header);
+          $header = "From: guidocabrerasdla97@gmail.com"."\r\n". 
+          "Reply-To: guidocabrerasdla97@gmail.com"."\r\n". 
+          "X-Mailer: PHP/".phpversion();
+          $mail = mail($email,$this->utf8_to_latin2("Recuperacion de contraseña"),$this->utf8_to_latin2("Se ha solicitado un cambio de contraseña en la cuenta de tiendaonline.com, para continuar con el cambio de contraseña")." haga click en el siguiente link: ".constant('URL')."recoverPass/ChangePassword/".$user->getId2()."/".$token,$header);
 
-        if($mail){
-              echo "<script type='text/javascript'>  
-              alert('se ha enviado el mail correctamente');
-              </script>";
-        }
-        else{
-           echo "<script type='text/javascript'>  
-              alert('ha ocurrido un error al mandar el mail, ingrese nuevamente su email');
-              window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/RecoverPass';
-              </script>";
-        }
+          if($mail){
+              $this->Message('se ha enviado el mail correctamente');
+          }
+          else{
+              $this->Message('ha ocurrido un error al mandar el mail, ingrese nuevamente su email',constant("URL")."RecoverPass");
+          }
       }
-
-       else{
-        echo "<script type='text/javascript'>  
-        alert('El mail que ha proporcionado no esta vinculado a ninguna cuenta existente');
-        </script>";
-       }
-
-       $this->render('');
+      else{ $this->Message('El mail que ha proporcionado no esta vinculado a ninguna cuenta existente'); }
+      $this->render('');
    }
 
    function changePassword($param=null){
        if($this->model->searchToken($param[0],$param[1])){
-        $this->view->render('RecoverPass/changePassword');
+          $this->view->render('RecoverPass/changePassword');
        }
-
-       else{
-           echo "<script type='text/javascript'>
-           alert('Se fue pal otro lado');
-           window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/main';
-</script>";
-           
-       }
+       else{ $this->Message('Ha Ocurrido un error con los datos proporcionados, intente nuevamente',constant("URL")."RecoverPass"); }
    }
 
    function newPassword(){
@@ -72,14 +58,10 @@ class recoverPass extends controller{
        if($_POST["password"]==$_POST["password2"]){
            $pass = $_POST["password"];
            if($this->model->insertNewPass($pass,$_SESSION['user']['id'])&&$this->model->ChangeResetpass($_SESSION['user']['id'])){
-            echo "<script type='text/javascript'>
-            window.location.href='http://192.168.2.102/PHP/ProyectoBootstrap/successful';
-        </script>";
+             $this->Message('',constant("URL")."successful");
            }
            else{
-            echo "<script type='text/javascript'>
-            alert('Ha ocurrido un error');
-        </script>";
+            $this->Message('Ha ocurrido un error al cambiar la contraseña, intente nuevamente mas tarde');
             $this->render('');
            }
        }

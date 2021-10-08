@@ -21,79 +21,51 @@ class createAccount extends controller{
   function sendMail(){
 
    if(!empty($_POST['Email'])&&!empty($_POST["Code"])){
-       $email = $_POST['Email'];
-       $code = $_POST['Code'];
-
-      // $codRandom = str_pad(rand(1,999999), 6, "0", STR_PAD_LEFT);
-
-      $header = "From: guidocabrerasdla97@gmail.com"."\r\n". 
-      "Reply-To: guidocabrerasdla97@gmail.com"."\r\n". 
-      "X-Mailer: PHP/".phpversion();
-       $mail = mail($email,"Registracion tienda online","su codigo para completar la registracion es: ".$code,$header);
-
-        if($mail){
-              echo "<script type='text/javascript'>  
-              alert('se ha enviado el mail correctamente');
-              </script>";
-        }
-        else{
-           echo "<script type='text/javascript'>  
-              alert('ha ocurrido un error al manda el mail, complete nuevamente el formulario');
-              window.location.href='".constant("URL")."createAccount';
-              </script>";
-        }
+      $email = $_POST['Email'];
+      $code = $_POST['Code'];
+      
+      if($this->model->verifyExistEmail($email)){
+         $this->Message('El mail proporcionado ya esta relacionado con una cuenta existente',constant("URL").'createAccount');
       }
-
-    else{
-    echo "<script type='text/javascript'>
-       if(window.location.href=='".constant("URL")."createAccount/registrarCliente'){
-                alert('Ha ocurrido un error con los datos proporcionados, por favor complete los campos nuevamente');
-                window.location.href='".constant("URL")."createAccount';
-                }
-    </script>";
-    }
-   
-   // $this->render('');  
+      else{
+         $header = "From: guidocabrerasdla97@gmail.com"."\r\n". 
+         "Reply-To: guidocabrerasdla97@gmail.com"."\r\n". 
+         "X-Mailer: PHP/".phpversion();
+         $mail = mail($email,"Registracion tienda online","su codigo para completar la registracion es: ".$code,$header);
+ 
+         if($mail!=true){
+         $this->Message('ha ocurrido un error al enviar el mail, complete nuevamente el formulario',constant("URL").'createAccount');
+         }
+      }
+   }
+   else{
+      $link = "http://"."$_SERVER[HTTP_HOST]"."$_SERVER[REQUEST_URI]";
+        if($link==constant("URL").'createAccount/sendMail'){
+          $this->Message('ha ocurrido un error al mandar el mail, complete nuevamente el formulario',constant("URL").'createAccount');
+        }
+   }
   }
 
   function insertC(){
 
     if(!empty($_POST['name'])&&!empty($_POST['surname'])&&!empty($_POST['password'])&&!empty($_POST['Email'])&&!empty($_POST['birthday'])){
-       $name = $_POST['name'];
-       $surname = $_POST['surname'];
-       $password = $_POST['password'];
-       $birthday = $_POST['birthday'];
-       $email = $_POST['Email'];
-       $codeA = $_POST['CodeA'];
-       $codeI = $_POST['CodeI'];
 
-       if($codeA==$codeI){
+      if($_POST['CodeA']==$_POST['CodeI']){
 
-          if($this->model->insert(['nombre' => $name,'apellido' => $surname,'pass' => $password,'FechaNac' => $birthday,'email' => $email])){
-
-            if($this->model->getByEmail($email)){
-         echo "<script type='text/javascript'>
-                  window.location.href='".constant("URL")."successful';
-       </script>";
-      }
-   }
-   
-   else{
-      echo "<script type='text/javascript'>
-         alert('Ha surgido un error al enviar los datos');
-</script>";
-   }
-       }
-
-       else{
-         echo "<script type='text/javascript'>
-         alert('El Codigo de verificacion es incorrecto');
-</script>";
-       }
-          
+          if($this->model->insert(['nombre' => $_POST["name"],'apellido' => $_POST["surname"],'pass' => $_POST["password"],'FechaNac' => $_POST["birthday"],'email' => $_POST["Email"]])){
+            if($this->model->getByEmail($_POST["Email"])){
+               $this->Message('',constant("URL")."successful");
+            }
+          }
+          else{
+            $this->Message('Ha surgido un error al enviar los datos');
+          }
+     }
+     else{
+        $this->Message('El codigo ingresado no es coincidente');
+     }
+    }
   }
-}
-
 
 };
 ?>

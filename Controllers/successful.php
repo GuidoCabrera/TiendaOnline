@@ -10,7 +10,5 @@ function render(){
     $this->view->render('successful/index');
 }
 
-
 };
-
 ?>

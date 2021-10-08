@@ -3,7 +3,6 @@
 class controller{
 
     function __construct(){
-        //echo "controlador base";
         $this->view = new view();
     }
 
@@ -18,6 +17,24 @@ class controller{
          }
     }
 
-}
+    function Message($msj,$url=""){
+        if($url!=""&&$msj!=""){
+           echo "<script type='text/javascript'>  
+           alert('".$msj."');
+           window.location.href='".$url."';
+           </script>";  
+        }
+        else if($msj!=""){
+           echo "<script type='text/javascript'>  
+           alert('".$msj."');
+           </script>"; 
+        }
+        else{
+           echo "<script type='text/javascript'>  
+           window.location.href='".$url."';
+           </script>";
+        }
+    }
 
+}
 ?>

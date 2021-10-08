@@ -7,10 +7,8 @@ class app{
 $url= isset($_GET['url']) ? $_GET['url'] :null;
 $url= rtrim($url,"/");
 $url= explode("/",$url);
-//var_dump($url);
 
  if(empty($url[0])){
-     //echo "esta vacio";
      $archivocontroller = "Controllers/main.php";
      require_once $archivocontroller;
      $controller = new main();

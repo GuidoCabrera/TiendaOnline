@@ -1,6 +1,5 @@
 var num = document.getElementById("boxCant");
 
-
 for(var i=1;i<=10;i++){
    var span = document.createElement("span");
    span.textContent = i;

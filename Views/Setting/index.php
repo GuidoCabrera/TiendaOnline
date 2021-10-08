@@ -35,25 +35,25 @@
 
           <div class="inputBox">
            <span class="details">Name</span>   
-          <input type="text" name="name" class="form-control" disabled="true" value="<?php $this->user->getNombre();?>"><button type="button" name="name"><i class="icon-pencil"></i></button>
+          <input type="text" name="name" class="form-control" autocomplete="off" disabled="true" value="<?php $this->user->getNombre();?>"><button type="button" name="name"><i class="icon-pencil"></i></button>
             <p></p>
           </div>
 
           <div class="inputBox">
            <span class="details">Surname</span>   
-          <input type="text" name="surname" class="form-control" disabled="true" value="<?php $this->user->getApellido();?>"><button type="button" name="surname"><i class="icon-pencil"></i></button>
+          <input type="text" name="surname" class="form-control" autocomplete="off" disabled="true" value="<?php $this->user->getApellido();?>"><button type="button" name="surname"><i class="icon-pencil"></i></button>
             <p></p>
           </div>
 
           <div class="inputBox">
            <span class="details">Password</span>   
-          <input type="password" name="password" class="form-control" disabled="true" value="<?php $this->user->getContraseña();?>"><button type="button" id="BtnPass" name="password"><i class="icon-pencil"></i></button>
+          <input type="password" name="password" class="form-control" autocomplete="off" disabled="true" value="<?php $this->user->getContraseña();?>"><button type="button" id="BtnPass" name="password"><i class="icon-pencil"></i></button>
             <p></p>
           </div>
 
           <div class="inputBox">
            <span class="details">Birthday</span>   
-           <input type="text" name="birthday" autocomplete="off" disabled="true" value=<?php echo $this->user->getFechaNac();?> class="form-control" id="birthday"><button type="button" name="birthday"><i class="icon-pencil"></i></button>
+           <input type="text" name="birthday" readonly autocomplete="off" disabled="true" value=<?php echo $this->user->getFechaNac();?> class="form-control" id="birthday"><button type="button" name="birthday"><i class="icon-pencil"></i></button>
             <p></p>
           </div>
 
@@ -85,10 +85,12 @@
 <!-- Datepicker Boostrap -->
     <script src="<?php echo constant("URL")?>public/libsExternals/js/bootstrap-datepicker.min.js"></script>
     <script src="<?php echo constant("URL")?>public/libsExternals/locales/bootstrap-datepicker.es.min.js"></script>
-    <!--  -->
+    <!-- public js  -->
+    <script src="<?php echo constant("URL")?>public/js/url.js"></script>
     <script src="<?php echo constant("URL")?>public/js/main.js"></script>
     <script src="<?php echo constant('URL')?>public/js/inputToggle.js"></script>
     <script src="<?php echo constant('URL')?>public/js/setting.js"></script>
+    <script src="<?php echo constant("URL")?>public/js/datepicker.js"></script>
     <script src="<?php echo constant("URL")?>public/js/datepickerSett.js"></script>
 </body>
 </html>

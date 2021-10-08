@@ -14,8 +14,8 @@
 <nav id="sidebar">
       <div class="navbar-p1 p-4 pt-5">
 
-        <a href="<?php echo constant('URL')?>Main" class="img logo d-sm-block d-none rounded-circle mb-5"
-          style="background-image: url(<?php echo constant('URL');?>public/img/comunicacion-global.png); margin:0 auto;"></a>
+        <a href="<?php echo constant('URL')?>Main" class="img logo d-sm-block d-none mb-4"
+          style="background-image: url(<?php echo constant('URL');?>public/img/TiendaOnline.jpg); margin:0 auto;"></a>
 
         <ul class="list-unstyled">
           <li> <a href="<?php echo constant('URL'); ?>Women"><i class="icon-female"></i> Women</a></li>

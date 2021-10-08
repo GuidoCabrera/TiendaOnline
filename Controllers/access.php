@@ -27,8 +27,8 @@ class Access extends controller{
               header('Location:'.constant('URL'));
             }
             else{
-                $this->view->mensaje = "El email y contraseña no coinciden con ninguna cuenta registrada";
-                $this->render('');
+              $this->view->mensaje = "El email y contraseña no coinciden con ninguna cuenta registrada";
+              $this->render('');
             }
         }
         else{

@@ -27,13 +27,12 @@
   <div class="row">
     <div class="col-8" id="containerSuccess">
     
-<p class="txtSuccess"> your request was successful, you will be redirected in </p> <p id="txtSeconds"> 10 </p> <p class="txtSuccess">seconds...</p>
+    <p class="txtSuccess"> your request was successful, you will be redirected in </p> 
+    <p id="txtSeconds"> 10 </p> <p class="txtSuccess">seconds...</p>
     
     </div>
   </div>
 </div>
-
-
 
 </div>
 
@@ -46,6 +45,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
+  <script src="<?php echo constant("URL")?>public/js/url.js"></script>
   <script src="<?php echo constant("URL")?>public/js/main.js"></script>
   <script src="<?php echo constant("URL")?>public/js/inputToggle.js"></script>
   <script src="<?php echo constant("URL")?>public/js/countSeconds.js"></script>

@@ -20,37 +20,23 @@ public function __construct($id,$nom,$ape,$contra,$fechaNa,$mail,$idrol){
     $this->idRol = $idrol;
 }
 
-public function getId(){
-    echo $this->id;
-}
+public function getId(){ echo $this->id; }
 
-public function getNombre(){
-    echo $this->nombre;
-}
-public function getApellido(){
-    echo $this->apellido;
-}
-public function getContraseña(){
-    echo $this->password;
-}
-public function getFechaNac(){
-    echo $this->fechaNac;
-}
-public function getFechaNac2(){
-    return $this->fechaNac;
-}
-public function getEmail(){
-    echo $this->email;
-}
+public function getNombre(){ echo $this->nombre; }
 
-public function getRol(){
-    echo $this->idRol;
-}
+public function getApellido(){ echo $this->apellido; }
 
-public function getId2(){
-    return $this->id;
-}
+public function getContraseña(){ echo $this->password; }
+
+public function getFechaNac(){ echo $this->fechaNac; }
+
+public function getFechaNac2(){ return $this->fechaNac; }
+
+public function getEmail(){ echo $this->email; }
+
+public function getRol(){ echo $this->idRol; }
+
+public function getId2(){ return $this->id; }
 
 }
-
 ?>
