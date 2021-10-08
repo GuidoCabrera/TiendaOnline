@@ -12,5 +12,4 @@ function conteo(){
         setTimeout(conteo,1000);
     }
 }
-
 conteo();

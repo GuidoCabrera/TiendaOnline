@@ -125,10 +125,9 @@ function enviarMail(){
 	return false;
 };
 
-
  button.addEventListener('click', (e) => {
 
- 		 var txt = document.getElementById('txt-submit');
+ 		var txt = document.getElementById('txt-submit');
 	
  		if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
         
@@ -156,9 +155,9 @@ function enviarMail(){
 		var dataen = "name="+inputs[0].value+"&surname="+inputs[1].value+"&password="+inputs[2].value+"&birthday="+inputs[4].value+"&Email="+inputs[5].value+"&CodeA="+num+"&CodeI="+inputCode.value;
         
 		$.ajax({
-          type:'post',
+      type:'post',
 		  url: constURL+'createAccount/InsertC',
-          data: dataen,
+      data: dataen,
 		  success: function(resp){
 			  $("#respa").html(resp);
 		  }

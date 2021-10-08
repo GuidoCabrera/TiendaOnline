@@ -5,6 +5,7 @@ h2 {
 
 .icon-close {
   color: #f5f7f7;
+  outline: none;
 }
 
 .modal-dialog {
@@ -30,14 +31,22 @@ h2 {
 
  #btnBuy {
   width: 400px;
+  outline: none;
+  text-decoration: none;
 } 
 
-.modal-content{
-  margin: 0 10px;
+#btnBuy:focus{
+  text-decoration: none;
+  outline: none;
 }
+
+/* .modal-content{
+   margin: 0 10px; 
+} */
 
 .modal-content img {
   height: 500px;
+  margin: 0 auto;
 }
 
 .modal-footer {
@@ -84,6 +93,13 @@ h2 {
   .card {
     margin: 0 auto;
   }
+  .modal-content img {
+    margin: 0 auto;
+    height: 450px;
+  }
+  #btnBuy{
+    width: 300px;
+  }
 }
 
 @media(max-width: 499px) and (min-width:400px) {
@@ -99,6 +115,9 @@ h2 {
     margin: 0 10px;
     height: 450px;
   }
+  #btnBuy{
+    width: 300px;
+  }
 }
 
 
@@ -112,8 +131,12 @@ h2 {
   }
 
   .modal-content img {
-    margin-left: 0;
+    margin-left: 0 auto;
+    width: 350px;
     height: 400px;
+  }
+  #btnBuy{
+    width: 250px;
   }
 }
 
@@ -127,7 +150,11 @@ h2 {
   }
 
   .modal-content img {
-    margin-left: 0;
-    height: 350px;
+    margin: 0 auto;
+    width: 280px;
+    height: 320px;
+  }
+  #btnBuy{
+    width: 200px;
   }
 }

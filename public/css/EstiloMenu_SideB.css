@@ -140,6 +140,7 @@
 .btn.btn-primary {
     background: #cc1439;
     border-color: #cc1439;
+    outline: none;
 }
 
 .btn.btn-primary:hover,
@@ -148,6 +149,7 @@
     border-color: #cc1439ed !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
+    outline: none;
 }
 
 .btn.btn-dark:hover,
