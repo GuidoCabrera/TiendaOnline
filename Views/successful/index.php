@@ -25,9 +25,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-8" id="containerSuccess">
+    <div class="col-12 col-md-8 text-center" id="containerSuccess">
     
-    <p class="txtSuccess"> your request was successful, you will be redirected in </p> 
+    <p class="txtSuccess"> Your request was successful, you will be redirected in </p> 
     <p id="txtSeconds"> 10 </p> <p class="txtSuccess">seconds...</p>
     
     </div>
@@ -47,7 +47,6 @@
   </script>
   <script src="<?php echo constant("URL")?>public/js/url.js"></script>
   <script src="<?php echo constant("URL")?>public/js/main.js"></script>
-  <script src="<?php echo constant("URL")?>public/js/inputToggle.js"></script>
   <script src="<?php echo constant("URL")?>public/js/countSeconds.js"></script>
   
   </body>

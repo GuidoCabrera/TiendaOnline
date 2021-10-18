@@ -36,10 +36,10 @@
     min-width: 200px;
     max-width: 200px;
     height: 100vh;
-}  
+}
 
 #sidebar.active {
-     margin-left: -200px; 
+     margin-left: -200px;
 }
 
 .logo {
@@ -123,7 +123,7 @@
        position: absolute;
        left: -70px;
        /* bottom: 20px */
-} 
+}
 
 #dropdownMenu-responsive{
     background: #1d1919;
@@ -135,7 +135,7 @@
 
 #dropdownMenu > a:focus{
     color: black;
-} 
+}
 
 .btn.btn-primary {
     background: #cc1439;
@@ -158,7 +158,7 @@
 
  .footer{
     margin-top: 70px;
-} 
+}
 
 .footer p {
     color: rgba(255, 255, 255, 0.5);
@@ -172,7 +172,7 @@
 
 .nav-p {
     margin-right: -7px;
-    margin-left: -7px; 
+    margin-left: -7px;
 }
 
 .nav-links-p h2{
@@ -197,30 +197,24 @@
         min-width: 160px;
         max-width: 160px;
     }
-
     #sidebar ul li a i {
         display: none;
     }
-
     #sidebar.active {
         margin-left: -160px;
     }
-
     .footer p {
         margin-top: -17px;
         font-size: 14px;
     }
-
     .navbar-p1 {
         position: fixed;
         min-width: 160px;
         max-width: 160px;
     }
-
     .nav-links-p li a {
         margin-left: 17px;
     }
-
     #dropdownMenuLink{
         margin-left: 17px;
     }
@@ -235,37 +229,31 @@
 }
 
 @media(max-width:575.8px) and (min-width:0) {
-    
+
     #sidebar{
         display: none;
     }
-
-     #menu-responsive{
+    #menu-responsive{
         display: none;
-    } 
-
+    }
     .nav-links-p h2{
         margin-top: 20px;
     }
-
     .nav-links-p li a, .nav-links-p div a{
         font-size: 21px;
         text-align: start;
         font-family: 'PT Sans Narrow', sans-serif;
         /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
     }
-
-     .menu-bar{
+    .menu-bar{
         margin-right: 10px;
         float: right;
     }
-
     .navbar-nav{
         width: 90%;
         height: 95vh;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
-
     .navbar-nav h2{
         margin-bottom: 10px;
         text-align: start;
@@ -273,88 +261,88 @@
         border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         font-family: 'Roboto Slab', serif;
     }
-
     .navbar-nav li a i{
         margin-right: 7px;
     }
-
     .navbar-collapse{
         -webkit-transition: all 0.8s;
         -o-transition: all 0.8s;
-        transition: all 0.8s; 
-    } 
-
+        transition: all 0.8s;
+    }
     .navbar::-webkit-scrollbar {
         width: 12px;
     }
     .navbar::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(83, 76, 76, 0.3); 
-        border-radius: 10px;     
+        box-shadow: inset 0 0 6px rgba(83, 76, 76, 0.3);
+        border-radius: 10px;
     }
     .navbar::-webkit-scrollbar-thumb {
         border-radius: 10px;
         box-shadow: inset 0 0 6px #006266;
-    } 
-
+    }
     #menu:checked ~ * .navbar {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        overflow-y: scroll;  
-    } 
-
+        overflow-y: scroll;
+    }
     #menu:checked ~ * .navbar-nav {
         height: 100vh;
-    } 
-
+    }
     #menu:checked ~ * .navbar #menu-responsive2{
         margin-top: 50px;
         height: 100vh;
-      }
- 
-    #menu:checked ~ * .menu-bar {
+    }
+     #menu:checked ~ * .menu-bar {
         position: absolute;
         top: 3%;
         right: 3%;
-    } 
-
+    }
     #menu:checked ~ * .nav-links-p {
         text-align: start;
-    } 
-
+    }
     #menu:checked ~ * .nav-links-p h2 {
         font-size: 25px;
         visibility: visible;
-        color: #006266; 
-    } 
-
+        color: #006266;
+    }
       #menu:checked ~ #content :not(.exclusive){
-        display: none; 
-    }      
-     
+        display: none;
+    }
 }
 
 @media (max-width:575.8px) and (min-height:651px) {
 
-      #menu:checked ~ * .nav-links-p h2 {
-        font-size: 40px;
-    } 
-
+    #menu:checked ~ * .navbar {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    #menu:checked ~ * .navbar #menu-responsive2{
+        height: 90vh;
+        min-height: 90vh;
+        overflow: hidden;
+    }
+    #menu:checked ~ * .menu-bar{
+        font-size: 3vh;
+    }
+    #menu:checked ~ * .nav-links-p h2 {
+        font-size: calc(5vh - 0.3em);
+    }
     #menu:checked ~ * .nav-links-p li a, #menu:checked ~ * .nav-links-p div a {
-        font-size: 25px;
+        font-size: calc(4vh - 0.2em);
+        transition: none;
     }
 }
 
  @media (max-width:575.8px) and (min-height:580px) and (max-height:650px) {
     #menu:checked ~ * .navbar #menu-responsive2{
         margin-top: 70px;
-      }
-      #menu:checked ~ * .nav-links-p h2 {
+    }
+    #menu:checked ~ * .nav-links-p h2 {
         font-size: 35px;
-    } 
-
+    }
     #menu:checked ~ * .nav-links-p li a, #menu:checked ~ * .nav-links-p div a {
         font-size: 20px;
     }
@@ -363,11 +351,21 @@
  @media (max-width:575.8px) and (min-height:451px) and (max-height:500px) {
     #menu:checked ~ * .navbar {
         padding-bottom: 70px;
-    } 
-}  
+    }
+}
 
 @media (max-width:575.8px) and (max-height:450px) {
-    #menu:checked ~ * .navbar {
-        padding-bottom: 120px;
-    } 
-}  
+    .navbar-nav h2{
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+    #linkAcce{
+        padding-bottom: 40px;
+    }
+    #menu:checked ~ * .navbar #menu-responsive2{
+        margin-top: 20px;
+    }
+    #menu:checked ~ * .menu-bar{
+        margin-top: 10px;
+    }
+}

@@ -848,7 +848,7 @@
     }
 
     #containerSecondary{
-        height: 150px;
+        height: 130px;
         top: 400px;
     }
 
@@ -858,8 +858,28 @@
 
 }
 
+@media (max-width:340px) and (min-width: 280px) {
 
-@media (max-width:330px) and (min-width: 320px) {
+    #containerSecondary{
+        height: 110px;
+        top: 400px;
+    }
+    #containerBuy{
+        height: 1250px; 
+    }
+
+    .boxRelative{  
+        right: 40px;
+    } 
+
+    #containerDetails{
+        height: 670px;
+        top: 65px;
+    }
+}
+
+
+/* @media (max-width:330px) and (min-width: 320px) {
 
     #containerBuy{
         height: 1250px; 
@@ -874,6 +894,6 @@
         top: 65px;
     }
      
-}
+} */
 
 

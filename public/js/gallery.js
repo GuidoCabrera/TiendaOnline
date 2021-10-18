@@ -28,7 +28,7 @@ for(imagen of imagenes){
      <div class="modal-dialog" role="document">
        <div class="modal-content">
    
-         <img src="public/img/${id.textContent}/${imagen}.jpg" alt="" class="img-fluid  mt-2 rounded">
+         <img src="public/img/${id.textContent}/${imagen}.jpg"  alt="" class="img-fluid  mt-2 rounded">
 
           <div class="modal-footer">
 

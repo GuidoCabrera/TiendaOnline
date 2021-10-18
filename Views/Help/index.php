@@ -12,9 +12,9 @@
   <!-- Fontastic icons -->
   <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/EstiloFonts.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="public/css/EstiloHelp.css">
+  <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/EstiloHelp.css">
   <!-- Sidebar&Menu CSS -->
-  <link rel="stylesheet" href="public/css/EstiloMenu_SideB.css">
+  <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/EstiloMenu_SideB.css">
 
     <title>Document</title>
 </head>

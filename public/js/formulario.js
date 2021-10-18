@@ -62,6 +62,16 @@ const validarFormulario = (e) => {
 
 		case "email":
 			validarCampo(expresiones.email,e.target,"email");
+			let tam = window.innerWidth;
+			 if(e.target.value.length>=21){
+			 	document.getElementById("i-email").style.display="none";
+			 }
+			 else if(tam<=410){
+			 	document.getElementById("i-email").style.display="none";
+			 }
+			 else{
+			 document.getElementById("i-email").style.display="inline";
+			}
 			break;
 	}
 }
@@ -108,6 +118,20 @@ const validarPassword2 = () => {
 inputs.forEach((input) => {
 	input.addEventListener("keyup", validarFormulario);
 	input.addEventListener("blur", validarFormulario);
+	 if(input.name=="email"){
+	 	input.addEventListener("keypress", (e)=>{
+			let tam = window.innerWidth;
+             if(e.target.value.length>=21){
+	 		 	document.getElementById("i-email").style.display="none";
+	 		 }
+	 		 else if(tam<=410){
+				document.getElementById("i-email").style.display="none";
+			 }
+			 else{
+			    document.getElementById("i-email").style.display="inline";
+		     }
+	 	});
+	 }
 })
 
 function enviarMail(){
@@ -128,24 +152,25 @@ function enviarMail(){
 
  button.addEventListener('click', (e) => {
 
- 		 var txt = document.getElementById('txt-submit');
+	$('#emailValidation').modal('show');
+ 		//  var txt = document.getElementById('txt-submit');
 	
- 		if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
+ 		// if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
         
-			txt.innerHTML = "Form sent successfully.";
-			setTimeout(() => {
-				txt.innerHTML="";
-				$('#emailValidation').modal('show');	 
-			   },2000);
+		// 	txt.innerHTML = "Form sent successfully.";
+		// 	setTimeout(() => {
+		// 		txt.innerHTML="";
+		// 		$('#emailValidation').modal('show');	 
+		// 	   },2000);
 		
- 			document.querySelectorAll("#containerSingIn i").forEach((icono) =>{
- 				icono.setAttribute("class","invisible");
- 		   })		
-        }
+ 		// 	document.querySelectorAll("#containerSingIn i").forEach((icono) =>{
+ 		// 		icono.setAttribute("class","invisible");
+ 		//    })		
+        // }
 
- 		else{
- 			txt.innerHTML = "<b>Error:</b> Please fill in the form correctly.";
- 		}
+ 		// else{
+ 		// 	txt.innerHTML = "<b>Error:</b> Please fill in the form correctly.";
+ 		// }
 	
  	});
 

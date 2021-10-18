@@ -136,12 +136,12 @@
       }
   }
   
-  @media(max-width: 412px) and (min-width:321px) {
-    #containerRecPass{
+  @media(max-width: 412px) and (min-width:320px) {
+      #containerRecPass{
         margin-top: 30px;
         width: 100%;
         height: 350px;
-    }
+      }
       #containerRecPass h2{
         font-size: 22px ;
         padding-top: 20px;
@@ -156,5 +156,4 @@
         margin-top: 13px;
         margin-left: 0px;
       }
-
   }

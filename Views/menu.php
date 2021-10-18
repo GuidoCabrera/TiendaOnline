@@ -64,7 +64,7 @@
               <li class="nav-item exclusive"><a href="<?php echo constant('URL')?>Women" class="nav-link exclusive"><i class="icon-female exclusive"></i>Women</a></li>
               <li class="nav-item exclusive"><a href="<?php echo constant('URL')?>Men" class="nav-link exclusive"><i class="icon-male exclusive"></i>Men</a></li>
               <li class="nav-item exclusive"><a href="<?php echo constant('URL')?>Children" class="nav-link exclusive"><i class="icon-child exclusive"></i>Children</a></li>
-              <li class="nav-item exclusive"><a href="<?php echo constant('URL')?>Accessories" class="nav-link exclusive"><i class="icon-accesories exclusive"></i>Accessories</a></li>
+              <li class="nav-item exclusive"><a href="<?php echo constant('URL')?>Accessories" id="linkAcce" class="nav-link exclusive"><i class="icon-accesories exclusive"></i>Accessories</a></li>
             </ul>
             
           </div> 

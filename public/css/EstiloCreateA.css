@@ -24,6 +24,11 @@
     outline: none;
     color: #f5f7f7;
     transition: 0.25s;
+    text-align: center;
+}
+
+#containerSingIn .input-grupo input::placeholder{
+    text-align: center;
 }
 
 .input-grupo{
@@ -123,10 +128,10 @@
     border-top: 1px solid #006266;
 }
 
-.modal-footer p{
-    margin-right: 25px;
+ .modal-footer p{
+    margin-right: 110px;
     margin-bottom: -5px;
-}
+} 
 
 .icon-close{
     color:rgba(255, 255, 255, 0.8);
@@ -143,9 +148,10 @@
 
 #btnCancel{
     border-radius: 12px;
+    margin-left: 15px;
 }
 
-@media(max-width:991px) and (min-width:768px) {
+@media(max-width:991px) and (min-width:769px) {
     #containerSingIn{
         width: 95%;
     }
@@ -162,7 +168,7 @@
     }
 }
 
-@media(max-width:768px) and (min-width:620px) {
+@media(max-width:768px) {
     #containerSingIn{
         width: 100%;
     }
@@ -175,15 +181,72 @@
     }
 }
 
-@media(max-width:620px) {
-    #containerSingIn{
-        width: 100%;
-    }
+@media(max-width:619px) and (min-width:320px)  {  
     #containerSingIn input{
         width: 85%;
     }
+}
 
-    button[type="submit"]{      
-        width: 65%;
+@media(max-width:575px) and (min-width:503px)  {  
+    .modal-dialog{
+        width: 470px;
+        margin: 0 auto;
+    }
+    .modal-footer p{
+        margin-right: 80px;
+    } 
+}
+
+@media(max-width:502px) and (min-width:430px)  {  
+    .modal-dialog{
+        width: 400px;
+        margin: 0 auto;
+    }
+    .modal-footer p{
+        margin-right: 20px;
+        font-size: 15px;
+    } 
+    .modal-title{
+        margin-left: 120px;
+    }
+}
+
+@media(max-width:429px) and (min-width:350px)  {  
+    .modal-dialog{
+        width: 335px;
+        margin: 0 auto;
+    }
+    .modal-title{
+        margin-left: 0;
+    }
+    .modal-footer p{
+        display: none;
+    } 
+    #btnCheck,#btnCancel{
+        width: 70px;
+        height: 35px;
+    } 
+}
+
+@media(max-width:349px) and (min-width:320px)  {  
+    .modal-dialog{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .modal-title{
+        margin-left: 0;
+    }
+    .modal-footer p{
+        display: none;
+    } 
+    #btnCheck,#btnCancel{
+        width: 70px;
+        height: 35px;
+    } 
+}
+
+@media(max-width:410px) {
+    .input-grupo i{
+        display: none;
     }
 }

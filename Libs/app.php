@@ -31,7 +31,6 @@ $url= explode("/",$url);
         $controller = new gallery();
         $controller->identifier($id);
       }
-
       else{
         $controller = new $url[0];
         $controller->loadModel($url[0]);
@@ -40,19 +39,17 @@ $url= explode("/",$url);
       $nparam = sizeof($url);
       
       if($nparam>1){
-         if($nparam>2){
+        if($nparam>2){
           $param=[];
           for($i=2;$i<$nparam;$i++){
                array_push($param,$url[$i]);
           }
-          // var_dump($param);
          $controller->{$url[1]}($param);
-       }
-       else{
+        }
+        else{
          $controller->{$url[1]}();
-       }
-    }
-
+        }
+      }
       else{ 
         $controller->render();
       }

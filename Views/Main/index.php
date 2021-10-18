@@ -141,7 +141,7 @@
                   <div class="input-group-prepend">
                       <i class="icon-surname input-group-text"></i>
                     </div>
-                    <input type="text" id="surname" name="surname" class="form-control" placeholder="Example: Johnson"
+                    <input type="text" id="surname" autocomplete="off" name="surname" class="form-control" placeholder="Example: Johnson"
                       style="width:60%">
                   </div>
 
@@ -191,8 +191,8 @@
   </script>
   <script src="<?php echo constant("URL")?>public/js/url.js"></script>
   <script src="<?php echo constant('URL')?>public/js/main.js"></script>
-  <script src="<?php echo constant('URL')?>js/app.js"></script>
   <script src="<?php echo constant('URL')?>public/js/inputToggle.js"></script>
+  <script src="<?php echo constant('URL')?>public/js/validateForm.js"></script>
   <script src="<?php echo constant("URL")?>public/js/formMain.js"></script>
 </body>
 

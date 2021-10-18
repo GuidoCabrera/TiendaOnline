@@ -41,11 +41,11 @@ class modelFunctions extends model{
               $sql->execute();
      
               return true;
-             }
-             catch(PDOEXCEPTION $e){
-                 printf("Connection Failed: ".$e->getMessage());
-                 return false;
-             }
+          }
+          catch(PDOEXCEPTION $e){
+              printf("Connection Failed: ".$e->getMessage());
+              return false;
+          }
       }
 
 
@@ -60,8 +60,8 @@ class modelFunctions extends model{
       }
       catch(PDOEXCEPTION $e){
         print_r("Connection Failed: ".$e->getMessage());
-          return false;
-        }
+        return false;
+      }
     }
 
     public function verifyExist($stmt){
@@ -75,10 +75,10 @@ class modelFunctions extends model{
           return false;
         }
         else{ return true; }
-     }
-     catch(PDO_EXCEPTION $e){
-       printf("Connection Failed: ".$e->getMessage());
-     }
+      }
+      catch(PDO_EXCEPTION $e){
+        printf("Connection Failed: ".$e->getMessage());
+      }
     }
 }
 ?>

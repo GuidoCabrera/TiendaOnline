@@ -80,9 +80,17 @@ h2 {
   .galleryImg {
     height: 500px;
   }
-
   .card {
     margin: 0 auto;
+  }
+  .modal-content{
+    width: 90%;
+    margin-left: 30px;
+    margin-top: 50px;
+    height: 500px;
+  }
+  #btnBuy{
+    width: 300px;
   }
 }
 
@@ -94,10 +102,15 @@ h2 {
   .card {
     margin: 0 auto;
   }
-
+  .modal-content{
+    width: 95%;
+    margin-left: 10px;
+  }
   .modal-content img {
-    margin: 0 10px;
     height: 450px;
+  }
+  #btnBuy{
+    width: 300px;
   }
 }
 
@@ -106,14 +119,18 @@ h2 {
   .galleryImg {
     height: 400px;
   }
-
   .card {
     margin: 0 auto;
   }
-
+  .modal-content{
+    width: 95%;
+    margin-left: 10px;
+  }
   .modal-content img {
-    margin-left: 0;
     height: 400px;
+  }
+  #btnBuy{
+    width: 250px;
   }
 }
 
@@ -121,13 +138,18 @@ h2 {
   .galleryImg {
     height: 300px;
   }
-
+  .modal-content{
+    width: 95%;
+    margin-left: 10px;
+  }
   .card {
     margin: 0 auto;
   }
-
   .modal-content img {
     margin-left: 0;
     height: 350px;
+  }
+  #btnBuy{
+    width: 200px;
   }
 }
