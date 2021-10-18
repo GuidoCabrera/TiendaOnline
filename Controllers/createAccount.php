@@ -50,7 +50,7 @@ class createAccount extends controller{
 
     if(!empty($_POST['name'])&&!empty($_POST['surname'])&&!empty($_POST['password'])&&!empty($_POST['Email'])&&!empty($_POST['birthday'])){
 
-       if($_POST['CodeA']==$_POST['CodeI']){
+      if($_POST['CodeA']==$_POST['CodeI']){
 
           if($this->model->insert(['nombre' => $_POST["name"],'apellido' => $_POST["surname"],'pass' => $_POST["password"],'FechaNac' => $_POST["birthday"],'email' => $_POST["Email"]])){
             if($this->model->getByEmail($_POST["Email"])){
@@ -59,11 +59,11 @@ class createAccount extends controller{
           }
           else{
             $this->Message('Ha surgido un error al enviar los datos');
-         }
-       }
-       else{
-         $this->Message('El codigo ingresado no es coincidente');
-       }
+          }
+     }
+     else{
+        $this->Message('El codigo ingresado no es coincidente');
+     }
     }
   }
 

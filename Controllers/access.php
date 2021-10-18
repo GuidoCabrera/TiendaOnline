@@ -24,7 +24,7 @@ class Access extends controller{
             $password = $_POST['password'];
             $value = $this->model->getByEmail(['email'=>$email,'password'=>$password]);
             if($value){
-              $this->Message('',constant("URL"));
+              header('Location:'.constant('URL'));
             }
             else{
               $this->view->mensaje = "El email y contraseña no coinciden con ninguna cuenta registrada";

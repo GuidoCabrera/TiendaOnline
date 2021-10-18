@@ -149,28 +149,26 @@ function enviarMail(){
 	return false;
 };
 
-
  button.addEventListener('click', (e) => {
 
-	$('#emailValidation').modal('show');
- 		//  var txt = document.getElementById('txt-submit');
-	
- 		// if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
-        
-		// 	txt.innerHTML = "Form sent successfully.";
-		// 	setTimeout(() => {
-		// 		txt.innerHTML="";
-		// 		$('#emailValidation').modal('show');	 
-		// 	   },2000);
-		
- 		// 	document.querySelectorAll("#containerSingIn i").forEach((icono) =>{
- 		// 		icono.setAttribute("class","invisible");
- 		//    })		
-        // }
+ 		var txt = document.getElementById('txt-submit');
 
- 		// else{
- 		// 	txt.innerHTML = "<b>Error:</b> Please fill in the form correctly.";
- 		// }
+ 		 if(campos.name && campos.surname && campos.password && campos.password2 && campos.email){
+        
+		 	txt.innerHTML = "Form sent successfully.";
+		 	setTimeout(() => {
+		 		txt.innerHTML="";
+		 		$('#emailValidation').modal('show');	 
+		 	   },2000);
+		
+ 		 	document.querySelectorAll("#containerSingIn i").forEach((icono) =>{
+ 		 		icono.setAttribute("class","invisible");
+ 		    })		
+         }
+
+ 		 else{
+ 		 	txt.innerHTML = "<b>Error:</b> Please fill in the form correctly.";
+ 		 }
 	
  	});
 
@@ -181,9 +179,9 @@ function enviarMail(){
 		var dataen = "name="+inputs[0].value+"&surname="+inputs[1].value+"&password="+inputs[2].value+"&birthday="+inputs[4].value+"&Email="+inputs[5].value+"&CodeA="+num+"&CodeI="+inputCode.value;
         
 		$.ajax({
-          type:'post',
+      type:'post',
 		  url: constURL+'createAccount/InsertC',
-          data: dataen,
+      data: dataen,
 		  success: function(resp){
 			  $("#respa").html(resp);
 		  }
