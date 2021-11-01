@@ -28,12 +28,12 @@
 
     <h2 class="text-white text-center mt-2">Change Password</h2>
 
-    <input type="password" name="password" id="password" placeholder="Insert your new password" class="form-control text-center">
+    <input type="password" name="password" autocomplete="off" id="password" placeholder="Insert your new password" class="form-control text-center">
     
-    <input type="password" name="password2" id="password2" placeholder="Repeat your new password" class="form-control text-center">
+    <input type="password" name="password2" autocomplete="off" id="password2" placeholder="Repeat your new password" class="form-control text-center">
 
     <div class="mt-4 text-center">
-    <button type="button" id="btnChangePass" class="btn btn-primary">Change password</button>
+    <button type="button" id="btnChangePass" class="btn btn-primary">Change</button>
     <p id="txtChangePass" class="text-center"></p>
     </div>
 
@@ -54,6 +54,7 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
   <script src="<?php echo constant("URL")?>public/js/url.js"></script>
+  <script src="<?php echo constant("URL")?>public/js/validateForm.js"></script>
   <script src="<?php echo constant('URL')?>public/js/formChangePass.js"></script>
 </body>
 </html>

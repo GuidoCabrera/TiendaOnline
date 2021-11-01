@@ -1,5 +1,5 @@
 <?php
-define('URL','http://192.168.2.103/PHP/ProyectoBootstrap/');
+define('URL','http://192.168.2.102/PHP/ProyectoBootstrap/');
 
 define('HOST','localhost');
 define('DB','tiendaonline');

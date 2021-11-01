@@ -41,36 +41,36 @@
             <form class="form-group" method="post" id="formCreate" onsubmit="return enviarMail();">
 
               <div class="input-grupo">
-                <input type="text" name="name" autocomplete="off" class="form-control text-center"
+                <input type="text" name="name" autocomplete="off" class="form-control" maxlength="20"
                   placeholder="Enter your name"> <i id="i-name"></i>
               </div>
               <p class="text-center small invisible" id="txt-name">Only characters with a quantity of 4 to 20 are allowed</p>
 
               <div class="input-grupo">
-                <input type="text" name="surname" autocomplete="off" class="form-control text-center"
+                <input type="text" name="surname" autocomplete="off" class="form-control" maxlength="20"
                   placeholder="Enter your surname"> <i id="i-surname"></i>
               </div>
               <p class="text-center small invisible" id="txt-surname">Only characters with a quantity of 4 to 20 are allowed</p>
 
               <div class="input-grupo">
-                <input type="password" name="password" id="password" autocomplete="off" class="form-control text-center"
+                <input type="password" name="password" id="password" autocomplete="off" class="form-control" maxlength="16"
                   placeholder="Enter your password"> <i id="i-password"></i>
               </div>
               <p class="text-center small invisible" id="txt-password">only 4 to 16 digits are allowed</p>
 
               <div class="input-grupo">
-                <input type="password" name="password2" id="password2" autocomplete="off" class="form-control text-center"
+                <input type="password" name="password2" id="password2" autocomplete="off" class="form-control" maxlength="16"
                   placeholder="Enter your password again"> <i id="i-password2"></i>
               </div>
               <p class="text-center small invisible" id="txt-password2">Passwords do not match</p>
 
               <div class="input-grupo">
-                <input type="text" name="birthday" readonly autocomplete="off" class="form-control text-center" id="birthday"
+                <input type="text" name="birthday" readonly autocomplete="off" class="form-control" id="birthday"
                   placeholder="Enter your birthday"> <i id="i-birthday"></i>
               </div>
 
               <div class="input-grupo">
-                <input type="email" name="email" id="inputEmail" autocomplete="off" class="form-control text-center"
+                <input type="email" name="email" id="inputEmail" autocomplete="off" class="form-control"
                   placeholder="Enter your email"> <i id="i-email"></i>
               </div>
               <p class="text-center small invisible" id="txt-email">The text entered is not an email</p>
@@ -110,8 +110,8 @@
 
           <div class="modal-footer">
 
-          <p>If you choose to cancel <br> or update the page, you must fill<br> in the fields again to register </p>
-
+          <p>Do not refresh the page <br> or you will lose <br> the current progress</p>
+          
           <a href="<?php echo constant('URL')?>createAccount">
           <button type="button" id="btnCancel" class="btn btn-secondary rounded">Cancel</button>
         </a> 
