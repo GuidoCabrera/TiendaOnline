@@ -47,7 +47,6 @@
 
             <div class="boxPhoto d-flex justify-content-center">
               <img src="<?php echo constant('URL');?>public/img/<?php echo $this->cate ?>/<?php echo $this->img ?>/<?php echo $this->img ?>.3.png" id="PhotoThree" alt=""
-              public\img\children\img2\img2.3.png  
                 class="img-fluid secondaryPhotos">
            </div>
 

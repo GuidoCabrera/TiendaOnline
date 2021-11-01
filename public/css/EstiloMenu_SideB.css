@@ -122,7 +122,6 @@
        opacity: 0.9;
        position: absolute;
        left: -70px;
-       /* bottom: 20px */
 }
 
 #dropdownMenu-responsive{
@@ -245,7 +244,6 @@
         font-size: 21px;
         text-align: start;
         font-family: 'PT Sans Narrow', sans-serif;
-        /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
     }
     .menu-bar{
         margin-right: 10px;

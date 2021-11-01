@@ -31,7 +31,7 @@ class modelFunctions extends model{
         catch(PDOEXCEPTION $e){
           print("Connection Failed: ".$e->getMessage());
           return false;
-      }
+        }
       }
   
       public function modify($table,$atrForChange,$newAtr,$nameColId,$id){

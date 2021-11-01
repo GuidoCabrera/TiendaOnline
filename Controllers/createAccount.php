@@ -38,12 +38,6 @@ class createAccount extends controller{
          }
       }
    }
-  //  else{
-  //     $link = "http://"."$_SERVER[HTTP_HOST]"."$_SERVER[REQUEST_URI]";
-  //       if($link==constant("URL").'createAccount/sendMail'){
-  //         $this->Message('ha ocurrido un error con los datos proporcionados, complete nuevamente el formulario',constant("URL").'createAccount');
-  //       }
-  //  }
   }
 
   function insertC(){
