@@ -50,6 +50,18 @@
     border-radius: 80px;
 }
 
+#sidebar ul{
+    height: 250px;
+    /* border: 1px solid blue; */
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    left: 7px;
+} 
+
 #sidebar ul li a {
     padding: 15px 0;
     font-size: 18px;
@@ -368,4 +380,18 @@
     #menu:checked ~ * .menu-bar{
         margin-top: 10px;
     }
+}
+
+@media (min-width:575.8px) and (min-height:650px) {
+    #sidebar ul{
+     position: absolute;
+     top: 50%;
+     margin-top: -125px;
+     }
+}
+ 
+ @media (min-width:575.8px) and (max-height:580px) {
+     #sidebar .footer p{
+         display: none;
+     }
 }
